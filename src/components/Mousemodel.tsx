@@ -58,7 +58,7 @@ export default function Mousemodel() {
 }
 
 function MouseFollower({ mouseNDC }: { mouseNDC: THREE.Vector2 }) {
-    const gltf = useGLTF('/mousemodel4.glb')
+    const gltf = useGLTF('/mousemodel.glb')
     const groupRef = useRef<THREE.Group>(null)
     const tailRef = useRef<THREE.Object3D>(null)
     const { camera } = useThree()

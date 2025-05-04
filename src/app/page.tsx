@@ -1,11 +1,3 @@
-'use client'
-import Mousemodel from '@/components/Mousemodel'
-import styles from './page.module.css'
-
-export default function HomePage() {
-    return (
-        <div className={styles.main}>
-            <Mousemodel />
-        </div>
-    )
+export default function page() {
+    return <div className='center'>heyo</div>
 }
