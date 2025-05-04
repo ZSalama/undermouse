@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+    images: {
+        remotePatterns: [
+            new URL('https://assets.contentful.com/x2wrt0bdfgy5/**'),
+            new URL('https://images.ctfassets.net/x2wrt0bdfgy5/**'),
+        ],
+    },
+}
 
-export default nextConfig;
+export default nextConfig
