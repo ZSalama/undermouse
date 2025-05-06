@@ -99,56 +99,10 @@ const Navbar = () => {
                                 </svg>
                             </button>
                         </li>
-                        <li className={styles.home_link}>
-                            {/* <Link
-                                href='/'
-                                className={
-                                    pathname === '/'
-                                        ? styles.activeLink + ' ' + styles.link
-                                        : styles.link
-                                }
-                                onClick={openSidebar}
-                                aria-label='Home'
-                            >
-                                Home
-                            </Link> */}
-                            {/* {!style ? (
-                                <Link
-                                    href='/'
-                                    onClick={openSidebar}
-                                    aria-label='Home'
-                                >
-                                    <Image
-                                        src='/logo.png'
-                                        alt='Logo'
-                                        width={84}
-                                        height={24}
-                                    />
-                                </Link>
-                            ) : (
-                                <Link
-                                    href='/'
-                                    className={
-                                        pathname === '/'
-                                            ? styles.activeLink +
-                                              ' ' +
-                                              styles.link
-                                            : styles.link
-                                    }
-                                    onClick={openSidebar}
-                                    aria-label='Home'
-                                >
-                                    <Image
-                                        src='/logo.png'
-                                        alt='Logo'
-                                        width={84}
-                                        height={24}
-                                    />
-                                </Link>
-                            )} */}
+                        <li className={styles.home_container}>
                             <Link
                                 href='/'
-                                className={styles.home_container}
+                                className={styles.home_link}
                                 onClick={openSidebar}
                                 aria-label='Home'
                             >

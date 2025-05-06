@@ -28,6 +28,7 @@
     display: flex;
     justify-content: left;
     padding: 0rem 2rem;
+    padding-left: 2.2rem;
 }
 
 .CTA_button {
