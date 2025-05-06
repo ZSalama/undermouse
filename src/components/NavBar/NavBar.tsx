@@ -93,7 +93,7 @@ const Navbar = () => {
                                     height='40px'
                                     viewBox='0 -960 960 960'
                                     width='40px'
-                                    fill='#e2e8f0'
+                                    fill='#1f1300'
                                 >
                                     <path d='m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z' />
                                 </svg>
@@ -112,7 +112,7 @@ const Navbar = () => {
                             >
                                 Home
                             </Link> */}
-                            {!styles ? (
+                            {/* {!style ? (
                                 <Link
                                     href='/'
                                     onClick={openSidebar}
@@ -138,9 +138,28 @@ const Navbar = () => {
                                     onClick={openSidebar}
                                     aria-label='Home'
                                 >
-                                    Home
+                                    <Image
+                                        src='/logo.png'
+                                        alt='Logo'
+                                        width={84}
+                                        height={24}
+                                    />
                                 </Link>
-                            )}
+                            )} */}
+                            <Link
+                                href='/'
+                                className={styles.home_container}
+                                onClick={openSidebar}
+                                aria-label='Home'
+                            >
+                                <Image
+                                    src='/8N3mLMs01.svg'
+                                    alt='Logo'
+                                    width={80}
+                                    height={20}
+                                    className='home_logo'
+                                />
+                            </Link>
                         </li>
                         <li>
                             <Link
