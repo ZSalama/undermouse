@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 300 300"
+  width="300"
+  height="300"
+>
+  <!-- Ears -->
+  <circle cx=" ninety" cy=" fifty" r="30" stroke="#000" stroke-width="4" fill="none" />
+  <circle cx="210" cy="50" r="30" stroke="#000" stroke-width="4" fill="none" />
+
+  <!-- Head -->
+  <circle cx="150" cy="100" r="60" stroke="#000" stroke-width="4" fill="none" />
+
+  <!-- Eyes -->
+  <circle cx="130" cy="90" r="6" fill="#000" />
+  <circle cx="170" cy="90" r="6" fill="#000" />
+
+  <!-- Nose -->
+  <circle cx="150" cy="115" r="5" stroke="#000" stroke-width="3" fill="none" />
+
+  <!-- Mouth -->
+  <path
+    d="M145,120
+       q5,5 10,0"
+    fill="none"
+    stroke="#000"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+
+  <!-- Whiskers -->
+  <line x1="100" y1="115" x2="135" y2="115" stroke="#000" stroke-width="3" />
+  <line x1="100" y1="125" x2="135" y2="130" stroke="#000" stroke-width="3" />
+  <line x1="200" y1="115" x2="165" y2="115" stroke="#000" stroke-width="3" />
+  <line x1="200" y1="125" x2="165" y2="130" stroke="#000" stroke-width="3" />
+
+  <!-- Body -->
+  <path
+    d="M Ninety,160
+       q60,100 120,0
+       a60,60 0 0,1 -120,0z"
+    fill="none"
+    stroke="#000"
+    stroke-width="4"
+  />
+
+  <!-- Computer Mouse -->
+  <ellipse cx="150" cy="200" rx="30" ry="40" stroke="#000" stroke-width="4" fill="none" />
+  <!-- Scroll wheel -->
+  <rect x="145" y="175" width="10" height="20" rx="3" ry="3" fill="#000" />
+
+  <!-- Arms holding mouse -->
+  <path
+    d="M120,170
+       q30,20 60,0"
+    fill="none"
+    stroke="#000"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+
+  <!-- Tail -->
+  <path
+    d="M230,180
+       c40,20 40,80 -20,100"
+    fill="none"
+    stroke="#000"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+</svg>

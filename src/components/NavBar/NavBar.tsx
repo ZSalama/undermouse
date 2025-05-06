@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 import { usePathname } from 'next/navigation'
 import Image from 'next/image'
@@ -8,8 +8,8 @@ import Image from 'next/image'
 const Navbar = () => {
     const pathname = usePathname()
     const [style, setStyle] = useState(false)
-    // const [lastScrollY, setLastScrollY] = useState(0)
-    // const [showNavbar, setShowNavbar] = useState(true)
+    const [lastScrollY, setLastScrollY] = useState(0)
+    const [showNavbar, setShowNavbar] = useState(true)
 
     // if (loading) return null
 
@@ -17,22 +17,22 @@ const Navbar = () => {
         setStyle((prev) => !prev)
     }
     // Scroll behavior: Show navbar when scrolling up, hide when scrolling down
-    // useEffect(() => {
-    //     let timeout: NodeJS.Timeout
-    //     const handleScroll = () => {
-    //         clearTimeout(timeout)
-    //         timeout = setTimeout(() => {
-    //             const currentScrollY = window.scrollY
-    //             setShowNavbar(
-    //                 currentScrollY < lastScrollY || currentScrollY < 50
-    //             )
-    //             setLastScrollY(currentScrollY)
-    //         }, 10) // Debounce to reduce re-renders
-    //     }
+    useEffect(() => {
+        let timeout: NodeJS.Timeout
+        const handleScroll = () => {
+            clearTimeout(timeout)
+            timeout = setTimeout(() => {
+                const currentScrollY = window.scrollY
+                setShowNavbar(
+                    currentScrollY < lastScrollY || currentScrollY < 50
+                )
+                setLastScrollY(currentScrollY)
+            }, 10) // Debounce to reduce re-renders
+        }
 
-    //     window.addEventListener('scroll', handleScroll)
-    //     return () => window.removeEventListener('scroll', handleScroll)
-    // }, [lastScrollY])
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [lastScrollY])
 
     return (
         <>
@@ -64,12 +64,12 @@ const Navbar = () => {
             ></div>
             {/* navbar */}
             <div
-                // className={`${
-                //     styles.navContainer
-                // } transition-transform duration-300 ${
-                //     showNavbar ? 'translate-y-0' : '-translate-y-full'
-                // }`}
-                className={styles.navContainer}
+                className={`${
+                    styles.navContainer
+                } transition-transform duration-300 ${
+                    showNavbar ? 'translate-y-0' : '-translate-y-full'
+                }`}
+                // className={styles.navContainer}
             >
                 <nav
                     className={
@@ -144,6 +144,20 @@ const Navbar = () => {
                         </li>
                         <li>
                             <Link
+                                href='/about'
+                                className={
+                                    pathname === '/about'
+                                        ? styles.activeLink + ' ' + styles.link
+                                        : styles.link
+                                }
+                                onClick={openSidebar}
+                                aria-label='About'
+                            >
+                                About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
                                 href='/portfolio'
                                 className={
                                     pathname === '/portfolio'
@@ -168,6 +182,20 @@ const Navbar = () => {
                                 aria-label='Blog'
                             >
                                 Blog
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                href='/contact'
+                                className={
+                                    pathname === '/contact'
+                                        ? styles.activeLink + ' ' + styles.link
+                                        : styles.link
+                                }
+                                onClick={openSidebar}
+                                aria-label='Contact'
+                            >
+                                Contact
                             </Link>
                         </li>
                     </ul>

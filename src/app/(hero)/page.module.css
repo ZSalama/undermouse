@@ -1,0 +1,77 @@
+.CTA_container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    /* background-color: #f3f4f6; gray-100 */
+    /* a little extra side padding */
+    gap: 2rem; /* controls the space between headline & button */
+    background: url('/8N3mLMs01.svg') no-repeat bottom left;
+    /* background-size: 70%; */
+    /* overflow-y: scroll;
+    scroll-snap-type: y mandatory; */
+}
+
+.headline {
+    max-width: 35rem; /* wide enough for wrapping */
+    margin: 0; /* remove the old push */
+    background: linear-gradient(60deg, #f00, #00f, #0f0);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    animation: gradientMove 4s infinite;
+    padding: 0rem 2rem;
+}
+
+.CTA_button_container {
+    display: flex;
+    justify-content: left;
+    padding: 0rem 2rem;
+}
+
+.CTA_button {
+    /* soft gray background, dark text, rounded corners */
+    background-color: var(--sidebar);
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.CTA_button:hover {
+    background-color: var(--sidebar-foreground);
+    color: var(--sidebar-accent);
+    transform: translateY(-2px);
+}
+
+.portfolio {
+    background-color: var(--sidebar-foreground);
+    min-height: 100vh;
+    color: var(--sidebar-accent);
+    padding: 10rem 10rem;
+    margin-top: 10rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* bump padding and headline offset on bigger screens */
+@media (min-width: 426px) {
+    .CTA_container {
+        max-width: 100vw;
+        background: url('/8N3mLMs01.svg') no-repeat bottom right;
+    }
+
+    .headline {
+        width: 35rem;
+        margin-left: 20%;
+    }
+
+    .CTA_button_container {
+        width: 30rem;
+        margin-left: 20%;
+        background-size: 20px 20px;
+    }
+}

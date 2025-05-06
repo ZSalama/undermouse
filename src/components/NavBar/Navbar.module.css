@@ -3,6 +3,8 @@
     display: flex;
     justify-content: flex-end; /* Align items to the right */
     width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .home_link {
@@ -18,6 +20,8 @@
     padding: 30px 2em;
     min-width: 100px;
     color: #black;
+    border-radius: 0.5rem;
+    background-color: var(--sidebar);
 }
 
 .activeLink {
@@ -26,7 +30,7 @@
 }
 
 .nav {
-    background-color: var(--sidebar);
+    /* background-color: var(--sidebar); */
     z-index: 50;
     max-width: 1550px; /* Set a maximum width for the .nav element */
     width: 100%;
@@ -40,21 +44,27 @@
 .navContainer {
     display: flex;
     justify-content: center; /* Center the .nav horizontally */
-    background-color: var(--sidebar);
+    /* background-color: var(--sidebar); */
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 50;
+    padding-right: 2rem;
 }
 
 .nav li {
     display: flex;
+    /* background-color: var(--sidebar); */
+    /* transition: background-color 0.2s ease, transform 0.2s ease; */
+    rounded: 0.5rem;
 }
 
 .link:hover {
-    transition: background-color 200ms ease-in-out;
     background-color: var(--sidebar-foreground);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    color: var(--sidebar-accent);
+    transform: translateY(-2px);
 }
 
 .menu_open_button {
@@ -74,6 +84,7 @@
 
 @media screen and (max-width: 800px) {
     .nav {
+        background-color: var(--sidebar);
         position: fixed;
         top: 0;
         right: 0;
@@ -82,7 +93,7 @@
         z-index: 10;
         /* border-left: 1px solid var(--sidebar); */
         transition: right 300ms ease-out;
-        background-color: var(--sidebar);
+        /* background-color: var(--sidebar); */
     }
 
     .menu_open_button {

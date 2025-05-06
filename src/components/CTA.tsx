@@ -17,6 +17,7 @@ gsap.registerPlugin(SplitText)
 
 export default function CTA({ className }: { className?: string }) {
     const textRef = useRef<HTMLSpanElement>(null)
+    const revealRef = useRef(null)
 
     useEffect(() => {
         if (!textRef.current) return
@@ -54,7 +55,7 @@ export default function CTA({ className }: { className?: string }) {
                     ease: 'power2.out',
                 })
                 // hold on screen
-                .to({}, { duration: 2.5 })
+                .to({}, { duration: 2 })
                 // animate out
                 .to(chars, {
                     opacity: 0,
@@ -74,8 +75,8 @@ export default function CTA({ className }: { className?: string }) {
     }, [])
 
     return (
-        <section className={`${className}`}>
-            <h1>
+        <section className={`${className} z-10`}>
+            <h1 ref={revealRef}>
                 Let&apos;s Talk
                 <br />
                 <span ref={textRef}>{words[0]}</span>
