@@ -3,7 +3,8 @@
     position: relative;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 100dvh;
+    /* height: -webkit-fill-available; */
     /* background-color: #f3f4f6; gray-100 */
     /* a little extra side padding */
     gap: 2rem; /* controls the space between headline & button */
@@ -43,18 +44,6 @@
     background-color: var(--sidebar-foreground);
     color: var(--sidebar-accent);
     transform: translateY(-2px);
-}
-
-.portfolio {
-    background-color: var(--sidebar-foreground);
-    min-height: 100vh;
-    color: var(--sidebar-accent);
-    padding: 10rem 10rem;
-    margin-top: 10rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 /* bump padding and headline offset on bigger screens */
