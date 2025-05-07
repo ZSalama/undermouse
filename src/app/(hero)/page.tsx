@@ -8,12 +8,31 @@ import { useScroll, MotionValue, useTransform, motion } from 'framer-motion'
 import Lenis from 'lenis'
 import { useEffect, useRef } from 'react'
 
+interface SlideProps {
+    direction: 'left' | 'right'
+    progress: MotionValue<number> // Replace `any` with the appropriate type if known
+    src: string
+    left: string
+}
+
 export default function Hero() {
     const container = useRef<HTMLDivElement | null>(null)
+    const text_container = useRef<HTMLDivElement | null>(null)
+    const page_container = useRef<HTMLDivElement | null>(null)
 
     const { scrollYProgress } = useScroll({
         target: container,
         offset: ['start start', 'end end'],
+    })
+
+    const page_container_parallax = useScroll({
+        target: page_container,
+        offset: ['start start', 'end end'],
+    })
+
+    const text_parallax = useScroll({
+        target: text_container,
+        offset: ['start end', 'end start'],
     })
 
     useEffect(() => {
@@ -55,19 +74,19 @@ export default function Hero() {
                     ref={container}
                     className='relative h-[200svh] bg-gray-200 max-w-[1920px] align-center mx-auto'
                 >
-                    {/* <motion.div
-                    id='scroll-indicator'
-                    style={{
-                        scaleX: scrollYProgress,
-                        position: 'fixed',
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        height: 10,
-                        originX: 0,
-                        backgroundColor: '#ff0088',
-                    }}
-                /> */}
+                    <motion.div
+                        id='scroll-indicator'
+                        style={{
+                            scaleX: page_container_parallax.scrollYProgress,
+                            position: 'fixed',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            height: 10,
+                            originX: 0,
+                            backgroundColor: '#ff0088',
+                        }}
+                    />
 
                     {/* <section className={` ${styles.CTA_container}`}>
                     <div className={` ${styles.headline}`}>
@@ -82,6 +101,30 @@ export default function Hero() {
                 </section> */}
                     <Section1 scrollYProgress={scrollYProgress} />
                     <Section2 scrollYProgress={scrollYProgress} />
+                    <main className='overflow-hidden bg-gray-200'>
+                        <div className='h-[50vh]' />
+                        <div ref={text_container}>
+                            <Slide
+                                src='/beach.jpg'
+                                direction={'left'}
+                                left={'-40%'}
+                                progress={text_parallax.scrollYProgress}
+                            />
+                            <Slide
+                                src='/beach2.jpg'
+                                direction={'right'}
+                                left={'-25%'}
+                                progress={text_parallax.scrollYProgress}
+                            />
+                            <Slide
+                                src='/beach3.jpg'
+                                direction={'left'}
+                                left={'-75%'}
+                                progress={text_parallax.scrollYProgress}
+                            />
+                        </div>
+                        <div className='h-[50vh]' />
+                    </main>
                 </div>
             </div>
         </>
@@ -152,5 +195,40 @@ const Section2 = ({
         <motion.div style={{ scale, rotate }} className='relative h-screen'>
             <Image src='/beach2.jpg' alt='img' fill objectFit='cover' />
         </motion.div>
+    )
+}
+
+const Slide = (props: SlideProps) => {
+    const direction = props.direction == 'left' ? -1 : 1
+    const translateX = useTransform(
+        props.progress,
+        [0, 1],
+        [150 * direction, -150 * direction]
+    )
+    return (
+        <motion.div
+            style={{ x: translateX, left: props.left }}
+            className='relative flex whitespace-nowrap'
+        >
+            <Phrase src={props.src} />
+            <Phrase src={props.src} />
+            <Phrase src={props.src} />
+        </motion.div>
+    )
+}
+
+const Phrase = ({ src }: { src: string }) => {
+    return (
+        <div className={'px-5 flex gap-5 items-center'}>
+            <p className='text-[7.5vw]'>Front End Developer</p>
+            <span className='relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden'>
+                <Image
+                    style={{ objectFit: 'cover' }}
+                    src={src}
+                    alt='image'
+                    fill
+                />
+            </span>
+        </div>
     )
 }
