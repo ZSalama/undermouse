@@ -53,7 +53,7 @@ export default function Hero() {
             <div className='bg-gray-200'>
                 <div
                     ref={container}
-                    className='relative h-[200vh] bg-gray-200 max-w-[100rem] align-center mx-auto'
+                    className='relative h-[200svh] bg-gray-200 max-w-[1920px] align-center mx-auto'
                 >
                     {/* <motion.div
                     id='scroll-indicator'
