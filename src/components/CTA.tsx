@@ -75,7 +75,7 @@ export default function CTA({ className }: { className?: string }) {
     }, [])
 
     return (
-        <section className={`${className} z-10`}>
+        <section className={`${className}`}>
             <h1 ref={revealRef}>
                 Let&apos;s Talk
                 <br />
