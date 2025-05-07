@@ -1,5 +1,7 @@
+'use client'
 import '../globals.css'
 import styles from './layout.module.css'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 export default function RootLayout({
     children,
@@ -7,9 +9,11 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <div className={styles.container}>
-            {children}
-            {/* <Footer /> */}
-        </div>
+        <ParallaxProvider>
+            <div className={styles.container}>
+                {children}
+                {/* <Footer /> */}
+            </div>
+        </ParallaxProvider>
     )
 }

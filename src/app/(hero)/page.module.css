@@ -70,6 +70,19 @@
     margin-top: 10rem;
 }
 
+.mousechillin {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50rem;
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+}
+
 /* bump padding and headline offset on bigger screens */
 @media (min-width: 769px) {
     .CTA_container {

@@ -4,7 +4,14 @@ import styles from './page.module.css'
 import Portfolio from '@/components/Portfolio/Portfolio'
 // import MiddleImage from '@/components/MiddleImage/MiddleImage'
 import ParallaxImage from '@/components/ParallaxImage/ParallaxImage'
+import { Parallax, useParallax } from 'react-scroll-parallax'
+import Image from 'next/image'
+
 export default function Hero() {
+    const { ref } = useParallax<HTMLDivElement>({
+        speed: 10,
+    })
+
     return (
         <>
             <section className={` ${styles.CTA_container} z-5 `}>
@@ -24,17 +31,36 @@ export default function Hero() {
 
             <Portfolio />
             <ParallaxImage
-                src='beach.jpg'
+                src='computermouse.svg'
                 alt='beach'
-                height={600}
+                height={200}
                 speed={0.15}
             />
             <ParallaxImage
-                src='beach2.jpg'
+                src='mousejumping.svg'
                 alt='beach'
-                height={600}
-                speed={0.12}
+                height={200}
+                speed={0.8}
             />
+            <div ref={ref}>
+                <Parallax
+                    // src='mousechillin.svg'
+                    // alt='beach'
+                    // height={600}
+                    // speed={0.15}
+                    translateY={[-20, 20]}
+                    style={{ height: '200vh', padding: '50px' }}
+                >
+                    <Image
+                        src='/mousechillin.svg'
+                        className={styles.mousechillin}
+                        alt='Beach'
+                        width={100}
+                        height={100}
+                    />
+                </Parallax>
+            </div>
+
             <Portfolio />
             <Portfolio />
             <Portfolio />
