@@ -1,4 +1,5 @@
 import '../globals.css'
+import styles from './layout.module.css'
 
 export default function RootLayout({
     children,
@@ -6,7 +7,7 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <div>
+        <div className={styles.container}>
             {children}
             {/* <Footer /> */}
         </div>
