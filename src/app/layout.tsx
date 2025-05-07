@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import NavBar from '@/components/NavBar/NavBar'
+// import NavBar from '@/components/NavBar/NavBar'
 import { PostHogProvider } from './providers'
 
 const geistSans = Geist({
@@ -30,7 +30,7 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 <PostHogProvider>
-                    <NavBar />
+                    {/* <NavBar /> */}
                     {children}
                 </PostHogProvider>
             </body>

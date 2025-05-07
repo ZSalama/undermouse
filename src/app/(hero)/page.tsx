@@ -3,14 +3,22 @@ import CTA from '@/components/CTA'
 import styles from './page.module.css'
 import Portfolio from '@/components/Portfolio/Portfolio'
 // import MiddleImage from '@/components/MiddleImage/MiddleImage'
-import ParallaxImage from '@/components/ParallaxImage/ParallaxImage'
+// import ParallaxImage from '@/components/ParallaxImage/ParallaxImage'
 import { Parallax, useParallax } from 'react-scroll-parallax'
 import Image from 'next/image'
+// import MouseChillin from '@/public/mousechillin.svg'
+// import MouseChillin from '@/components/MouseChillin/MouseChillin'
+// import { useInView } from 'react-intersection-observer'
 
 export default function Hero() {
-    const { ref } = useParallax<HTMLDivElement>({
+    const parallax_scroller = useParallax<HTMLDivElement>({
         speed: 10,
     })
+
+    // const { ref, inView } = useInView({
+    //     triggerOnce: true,
+    //     threshold: 0.1,
+    // })
 
     return (
         <>
@@ -27,55 +35,94 @@ export default function Hero() {
                     </button>
                 </div>
             </section>
-            {/* <MiddleImage /> */}
-
-            <Portfolio />
-            <ParallaxImage
-                src='computermouse.svg'
-                alt='beach'
-                height={200}
-                speed={0.15}
-            />
-            <ParallaxImage
-                src='mousejumping.svg'
-                alt='beach'
-                height={200}
-                speed={0.8}
-            />
-            <div ref={ref}>
+            {/* background wallpapers */}
+            <div className={styles.mouse_art_container}>
+                <div ref={parallax_scroller.ref}>
+                    <Parallax
+                        className={styles.mousechillin_container}
+                        speed={50}
+                    >
+                        <Image
+                            src='/beach.jpg'
+                            className={styles.mousechillin}
+                            alt='Beach'
+                            width={400}
+                            height={400}
+                        />
+                    </Parallax>
+                </div>
+                <div ref={parallax_scroller.ref}>
+                    <Parallax
+                        className={styles.mousechillin_container}
+                        speed={50}
+                    >
+                        <Image
+                            src='/beach2.jpg'
+                            className={styles.mousechillin}
+                            alt='Beach'
+                            width={300}
+                            height={300}
+                        />
+                    </Parallax>
+                </div>
+                <div ref={parallax_scroller.ref}>
+                    <Parallax
+                        className={styles.mousechillin_container}
+                        speed={50}
+                    >
+                        <Image
+                            src='/beach3.jpg'
+                            className={styles.mousechillin}
+                            alt='Beach'
+                            width={500}
+                            height={300}
+                        />
+                    </Parallax>
+                </div>
+            </div>
+            {/* <div ref={parallax_scroller.ref}>
                 <Parallax
                     // src='mousechillin.svg'
                     // alt='beach'
                     // height={600}
                     // speed={0.15}
-                    translateY={[-20, 20]}
-                    style={{ height: '200vh', padding: '50px' }}
+                    // translateY={[-20, 20]}
+                    className={styles.mousechillin_container}
+                    speed={-10}
+                    // style={{ marginLeft: '15rem' }}
                 >
                     <Image
                         src='/mousechillin.svg'
                         className={styles.mousechillin}
                         alt='Beach'
                         width={100}
-                        height={100}
+                        height={300}
                     />
                 </Parallax>
-            </div>
+            </div> */}
 
             <Portfolio />
             <Portfolio />
             <Portfolio />
+
+            <Portfolio />
+
+            <Portfolio />
+
+            <Portfolio />
+
             <Portfolio />
             <Portfolio />
             <Portfolio />
-            <ParallaxImage
-                src='beach3.jpg'
-                alt='beach'
-                height={600}
-                speed={0.15}
-            />
-            <Portfolio />
-            <Portfolio />
-            <Portfolio />
+            <div className={styles.infograph_container}>
+                <Image
+                    src='/infograph.png'
+                    className={styles.infograph}
+                    alt='Beach'
+                    width={500}
+                    height={300}
+                />
+            </div>
             <Portfolio />
             <Portfolio />
             <Portfolio />
