@@ -50,8 +50,12 @@ export default function Hero() {
                     whileTap={{ scale: 0.9 }}
                 ></motion.div>
             </div> */}
-            <div ref={container} className='relative h-[200vh] bg-gray-200'>
-                {/* <motion.div
+            <div className='bg-gray-200'>
+                <div
+                    ref={container}
+                    className='relative h-[200vh] bg-gray-200 max-w-[100rem] align-center mx-auto'
+                >
+                    {/* <motion.div
                     id='scroll-indicator'
                     style={{
                         scaleX: scrollYProgress,
@@ -65,7 +69,7 @@ export default function Hero() {
                     }}
                 /> */}
 
-                {/* <section className={` ${styles.CTA_container}`}>
+                    {/* <section className={` ${styles.CTA_container}`}>
                     <div className={` ${styles.headline}`}>
                         <CTA className='text-5xl md:text-8xl lg:text-8xl leading-tight' />
                     </div>
@@ -76,8 +80,9 @@ export default function Hero() {
                         </button>
                     </div>
                 </section> */}
-                <Section1 scrollYProgress={scrollYProgress} />
-                <Section2 scrollYProgress={scrollYProgress} />
+                    <Section1 scrollYProgress={scrollYProgress} />
+                    <Section2 scrollYProgress={scrollYProgress} />
+                </div>
             </div>
         </>
     )
@@ -93,14 +98,43 @@ const Section1 = ({
     return (
         <motion.div
             style={{ scale, rotate }}
-            className='sticky top-0 h-screen bg-gray-200 text-4xl flex flex-col justify-center text-black pl-[20vh]'
+            className='sticky top-0 h-screen bg-gray-200 text-4xl flex flex-col justify-center text-black pl-10 md:pl-[20vh] lg:pl-[20vh]'
         >
             <CTA />
             <Image
-                src='/logo_fullscreen_2.png'
+                src='/logo_new.png'
                 alt='img'
-                fill
-                className='absolute top-0 left-0 -z-10 object-cover'
+                width={200}
+                height={200}
+                className='absolute -z-10 top-[20vh] md:top-[40vh] lg;top-[40vh] right-3 md:right-[20vh] lg:right-[20vh]'
+            />
+            <Image
+                src='/logo_new.png'
+                alt='img'
+                width={200}
+                height={200}
+                className='absolute -z-10 top-[0vh] md:top-[20vh] lg:top-[20vh] right-3 md:right-[20vh] lg:right-[20vh]'
+            />
+            <Image
+                src='/logo_new.png'
+                alt='img'
+                width={200}
+                height={200}
+                className='absolute -z-10 top-[00vh] md:top-[00vh] lg:top-[00vh] right-3 md:right-[20vh] lg:right-[20vh]'
+            />
+            <Image
+                src='/logo_new.png'
+                alt='img'
+                width={200}
+                height={200}
+                className='absolute -z-10 top-[60vh] md:top-[60vh] lg:top-[60vh] right-3 md:right-[20vh] lg:right-[20vh]'
+            />
+            <Image
+                src='/logo_new.png'
+                alt='img'
+                width={200}
+                height={200}
+                className='absolute -z-10 top-[80vh] md:top-[80vh] lg:top-[80vh] right-3 md:right-[20vh] lg:right-[20vh]'
             />
         </motion.div>
     )
@@ -116,7 +150,7 @@ const Section2 = ({
 
     return (
         <motion.div style={{ scale, rotate }} className='relative h-screen'>
-            <Image src='/beach2.jpg' alt='img' fill />
+            <Image src='/beach2.jpg' alt='img' fill objectFit='cover' />
         </motion.div>
     )
 }
