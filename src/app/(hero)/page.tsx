@@ -9,7 +9,10 @@ import Lenis from 'lenis'
 import { useEffect, useRef } from 'react'
 import { Section1 } from '@/components/Section1'
 import { Section2 } from '@/components/Section2'
+import Services from '@/components/Services/Services'
+// import Contact from '@/components/Contact/Contact'
 // import Link from 'next/link'
+import dynamic from 'next/dynamic'
 
 interface SlideProps {
     direction: 'left' | 'right'
@@ -18,6 +21,10 @@ interface SlideProps {
     left: string
     text: string
 }
+
+const Contact = dynamic(() => import('@/components/Contact/Contact'), {
+    ssr: false,
+})
 
 export default function Hero() {
     const container = useRef<HTMLDivElement | null>(null)
@@ -66,15 +73,15 @@ export default function Hero() {
                             right: 0,
                             height: 10,
                             originX: 0,
-                            backgroundColor: '#ff0088',
                             zIndex: 999,
                         }}
+                        className='bg-[var(--sidebar)]'
                     />
 
                     <Section1 scrollYProgress={scrollYProgress} />
                     <Section2 scrollYProgress={scrollYProgress} />
                     <div className='overflow-hidden bg-gray-200'>
-                        <div className='h-[50vh]' />
+                        <div className='h-[20vh]' />
                         <div ref={text_container}>
                             <Slide
                                 src='/beach.jpg'
@@ -98,7 +105,12 @@ export default function Hero() {
                                 text={'monkeybusiness-end web developer'}
                             />
                         </div>
-                        <div className='h-[50vh]' />
+                        <div className='h-[40vh]' />
+                    </div>
+
+                    <Services />
+                    <div className='h-[100vh] bg-gray-200 p-10 md:p-[10vh] lg:p-[20vh]'>
+                        <Contact />
                     </div>
                 </div>
             </div>

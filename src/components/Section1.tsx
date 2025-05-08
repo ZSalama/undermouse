@@ -19,7 +19,7 @@ export const Section1 = ({
             <div className='flex flex-col gap-5'>
                 <CTA_2 />
 
-                <MotionButton className='text-md md:text-4xl lg:text-[1.5vw] justify-center flex'>
+                <MotionButton className='cursor-pointer text-md md:text-4xl lg:text-[1.5vw] justify-center flex'>
                     Talk with UnderMouse
                 </MotionButton>
             </div>

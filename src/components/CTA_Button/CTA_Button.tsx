@@ -2,7 +2,7 @@
 import React from 'react'
 import { motion, MotionProps } from 'framer-motion'
 // import Link from 'next/link'
-import styles from './CTA_Button.module.css'
+// import styles from './CTA_Button.module.css'
 
 export interface MotionButtonProps extends MotionProps {
     /** Button label or any React node */
@@ -27,7 +27,7 @@ const MotionButton: React.FC<MotionButtonProps> = ({
     return (
         <motion.a
             href='/animations'
-            className={styles.CTA_button}
+            className='bg-[var(--sidebar)] px-8 py-3 rounded-lg w-fit shadow-[0_2px_8px_rgba(0,0,0,0.1)]'
             initial={initial}
             animate={animate}
             whileHover={whileHover}
