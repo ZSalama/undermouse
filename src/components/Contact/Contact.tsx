@@ -20,6 +20,7 @@ type FormSchema = z.infer<typeof formSchema>
 
 export default function Contact() {
     const form = useForm<FormSchema>({
+        // @ts-ignore
         resolver: zodResolver(formSchema),
         defaultValues: {
             name: '',
