@@ -20,7 +20,6 @@ type FormSchema = z.infer<typeof formSchema>
 
 export default function Contact() {
     const form = useForm<FormSchema>({
-        // @ts-expect-error TS error is too deep, but we know it works
         resolver: zodResolver(formSchema),
         defaultValues: {
             name: '',
