@@ -16,8 +16,8 @@ export default function CTA_2() {
 
         gsap.from(splitText.chars, {
             opacity: 0,
-            y: 50,
-            stagger: 0.05,
+            y: -80,
+            stagger: 0.1,
             duration: 2,
         })
         return () => {
