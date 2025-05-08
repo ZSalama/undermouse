@@ -1,5 +1,5 @@
 'use client'
-import CTA from '@/components/CTA'
+// import CTA from '@/components/CTA'
 // import styles from './page.module.css'
 // import Portfolio from '@/components/Portfolio/Portfolio'
 import Image from 'next/image'
@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { useScroll, MotionValue, useTransform, motion } from 'framer-motion'
 import Lenis from 'lenis'
 import { useEffect, useRef } from 'react'
+import CTA_2 from '@/components/CTA_2'
 
 interface SlideProps {
     direction: 'left' | 'right'
@@ -85,23 +86,13 @@ export default function Hero() {
                             height: 10,
                             originX: 0,
                             backgroundColor: '#ff0088',
+                            zIndex: 999,
                         }}
                     />
 
-                    {/* <section className={` ${styles.CTA_container}`}>
-                    <div className={` ${styles.headline}`}>
-                        <CTA className='text-5xl md:text-8xl lg:text-8xl leading-tight' />
-                    </div>
-
-                    <div className={styles.CTA_button_container}>
-                        <button className={styles.CTA_button}>
-                            Talk with UnderMouse
-                        </button>
-                    </div>
-                </section> */}
                     <Section1 scrollYProgress={scrollYProgress} />
                     <Section2 scrollYProgress={scrollYProgress} />
-                    <main className='overflow-hidden bg-gray-200'>
+                    <div className='overflow-hidden bg-gray-200'>
                         <div className='h-[50vh]' />
                         <div ref={text_container}>
                             <Slide
@@ -124,7 +115,7 @@ export default function Hero() {
                             />
                         </div>
                         <div className='h-[50vh]' />
-                    </main>
+                    </div>
                 </div>
             </div>
         </>
@@ -141,9 +132,32 @@ const Section1 = ({
     return (
         <motion.div
             style={{ scale, rotate }}
-            className='sticky top-0 h-screen bg-gray-200 text-4xl flex flex-col justify-center text-black pl-10 md:pl-[20vh] lg:pl-[20vh]'
+            className='sticky top-0 h-screen  bg-gray-200 flex flex-col justify-center text-black pl-10 md:pl-[10vh] lg:pl-[20vh]'
         >
-            <CTA />
+            {/* <CTA /> */}
+            <div className='flex flex-col gap-5 '>
+                <CTA_2 />
+                {/* <div className={styles.CTA_button_container}>
+                    <button className={styles.CTA_button}>
+                        Talk with UnderMouse
+                    </button>
+                </div> */}
+                <motion.button
+                    style={{ scale, rotate, zIndex: 999 }}
+                    className='bg-gray-200 text-black border-2 border-black rounded-full px-5 py-2 w-fit'
+                    // whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    Talk with Undermouse
+                </motion.button>
+                {/* <Image
+                    src='/scroll_down.png'
+                    alt='img'
+                    width={200}
+                    height={200}
+                    className=' w-[150px] h-[150px]'
+                /> */}
+            </div>
             <Image
                 src='/logo_new.png'
                 alt='img'
@@ -192,8 +206,18 @@ const Section2 = ({
     const rotate = useTransform(scrollYProgress, [0, 1], [5, 0])
 
     return (
-        <motion.div style={{ scale, rotate }} className='relative h-screen'>
-            <Image src='/beach2.jpg' alt='img' fill objectFit='cover' />
+        <motion.div
+            style={{ scale, rotate }}
+            className='relative h-screen left-[-90] md:top-0 lg:top-0'
+        >
+            <Image
+                src='/mousechillin_2.png'
+                alt='img'
+                width={200}
+                height={200}
+                className=''
+                // className='w-200 h-200'
+            />
         </motion.div>
     )
 }

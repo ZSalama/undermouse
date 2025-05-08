@@ -42,8 +42,8 @@ html {
 
 .CTA_button_container {
     display: flex;
-    justify-content: left;
-    padding: 0rem 0.2rem;
+    /* justify-content: left; */
+    padding: 0rem 2rem;
     /* padding-left: 2.2rem; */
 }
 
@@ -52,7 +52,7 @@ html {
     background-color: var(--sidebar);
     padding: 0.75rem 2rem;
     border-radius: 0.5rem;
-    font-weight: 600;
+    /* font-weight: 600; */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
