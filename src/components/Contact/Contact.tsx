@@ -139,7 +139,7 @@ export default function Contact() {
 
                 <Button
                     type='submit'
-                    className='w-full md:w-auto bg-[var(--sidebar)] hover:bg-[var(--sidebar-accent] font-medium transition-colors justify-center items-center'
+                    className='cursor-pointer w-full md:w-auto bg-[var(--sidebar)] hover:bg-[var(--sidebar-foreground)] font-medium transition-colors justify-center items-center text-black hover:text-[var(--sidebar)]'
                 >
                     Send Message
                 </Button>

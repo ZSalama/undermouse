@@ -1,19 +1,19 @@
 'use client'
-// import CTA from '@/components/CTA'
-// import styles from './page.module.css'/
-// import Portfolio from '@/components/Portfolio/Portfolio'
-import Image from 'next/image'
-// import * as motion from 'motion/react-client'
 import { useScroll, MotionValue, useTransform, motion } from 'framer-motion'
 import Lenis from 'lenis'
 import { useEffect, useRef } from 'react'
 import { Section1 } from '@/components/Section1'
 import { Section2 } from '@/components/Section2'
 import Services from '@/components/Services/Services'
-// import Contact from '@/components/Contact/Contact'
-// import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { Computer, Search, WandSparkles } from 'lucide-react'
+import Branding from '@/components/Branding'
+import Analytics from '@/components/Analytics'
+import Design from '@/components/Design'
+import SEO from '@/components/SEO'
+import Mobile from '@/components/Mobile'
+import UX from '@/components/UX'
+import AndMore from '@/components/AndMore'
 
 interface SlideProps {
     direction: 'left' | 'right'
@@ -82,7 +82,7 @@ export default function Hero() {
                     <Section1 scrollYProgress={scrollYProgress} />
                     <Section2 scrollYProgress={scrollYProgress} />
                     <div className='overflow-hidden bg-gray-200'>
-                        <div className='h-[20vh]' />
+                        <div className='h-[10vh]' />
                         <div ref={text_container}>
                             <Slide
                                 src='computer'
@@ -105,25 +105,20 @@ export default function Hero() {
                                 progress={text_parallax.scrollYProgress}
                                 text={'Detail Oriented'}
                             />
-                            {/* <Slide
-                                src='/beach2.jpg'
-                                direction={'right'}
-                                left={'-25%'}
-                                progress={text_parallax.scrollYProgress}
-                                text={'back-end web developer'}
-                            />
-                            <Slide
-                                src='/beach3.jpg'
-                                direction={'left'}
-                                left={'-75%'}
-                                progress={text_parallax.scrollYProgress}
-                                text={'monkeybusiness-end web developer'}
-                            /> */}
                         </div>
-                        <div className='h-[40vh]' />
+                        <div className='h-[10vh]' />
                     </div>
-
+                    {/* pl-10 md:pl-[10vh] lg:pl-[30vh] */}
                     <Services />
+                    <div className='overflow-hidden bg-gray-200 p-8'>
+                        <Branding className='overflow-hidden bg-gray-200 h-screen px-5 md:px-[5vh] lg:px-[15vh]' />
+                        <Analytics className='overflow-hidden bg-gray-200 h-screen px-0 md:px-[5%] lg:px-[10%]' />
+                        <Design className='overflow-hidden bg-gray-200 h-screen px-0 md:px-[5%] lg:px-[10%]' />
+                        <SEO className='overflow-hidden bg-gray-200 h-screen px-0 md:px-[5%] lg:px-[10%]' />
+                        <Mobile className='overflow-hidden bg-gray-200 h-screen px-0 md:px-[5%] lg:px-[10%]' />
+                        <UX className='overflow-hidden bg-gray-200 h-screen px-0 md:px-[5%] lg:px-[10%]' />
+                        <AndMore className='overflow-hidden bg-gray-200 h-screen px-0 md:px-[5%] lg:px-[10%]' />
+                    </div>
                     <div className='h-[100vh] bg-gray-200 p-10 md:p-[10vh] lg:p-[20vh]'>
                         <Contact />
                     </div>
@@ -148,6 +143,8 @@ const Slide = (props: SlideProps) => {
             <Phrase src={props.src} text={String(props.text)} />
             <Phrase src={props.src} text={String(props.text)} />
             <Phrase src={props.src} text={String(props.text)} />
+            <Phrase src={props.src} text={String(props.text)} />
+            <Phrase src={props.src} text={String(props.text)} />
         </motion.div>
     )
 }
@@ -155,7 +152,7 @@ const Slide = (props: SlideProps) => {
 const Phrase = ({ src, text }: { src: string; text: string }) => {
     return (
         <div className={'px-2 flex gap-2 items-center'}>
-            <p className='text-[7.5vw]'>{text}</p>
+            <p className='text-[4.5vw]'>{text}</p>
             <span className='flex h-[7.5vw] aspect-[4/2] rounded-full justify-center items-center'>
                 {/* <Image
                     style={{ objectFit: 'cover' }}
@@ -165,17 +162,17 @@ const Phrase = ({ src, text }: { src: string; text: string }) => {
                 /> */}
                 {src === 'computer' ? (
                     <Computer
-                        className='w-12 md:w-18 lg:w-24 h-12 md:h-18 lg:h-24'
+                        className='w-8 md:w-18 lg:w-20 h-12 md:h-18 lg:h-24'
                         color='var(--sidebar)'
                     />
                 ) : src === 'wand' ? (
                     <WandSparkles
-                        className='w-12 md:w-18 lg:w-24 h-12 md:h-18 lg:h-24'
+                        className='w-8 md:w-18 lg:w-20 h-12 md:h-18 lg:h-24'
                         color='var(--sidebar)'
                     />
                 ) : (
                     <Search
-                        className='w-12 md:w-18 lg:w-24 h-12 md:h-18 lg:h-24'
+                        className='w-8 md:w-18 lg:w-20 h-12 md:h-18 lg:h-24'
                         color='var(--sidebar)'
                     />
                 )}

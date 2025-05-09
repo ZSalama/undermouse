@@ -13,14 +13,14 @@ export const Section1 = ({
     return (
         <motion.div
             style={{ scale, rotate, zIndex: 999 }}
-            className='sticky top-0 h-screen  flex flex-col justify-center text-black pl-10 md:pl-[10vh] lg:pl-[20vh] text-md md:text-7xl lg:text-[1.5vw]'
+            className='sticky top-0 h-screen  flex flex-col justify-center text-black pl-10 md:pl-[10vh] lg:pl-[30vh] text-md md:text-7xl lg:text-[1.5vw]'
         >
             {/* <CTA /> */}
             <div className='flex flex-col gap-5'>
                 <CTA_2 />
 
-                <MotionButton className='cursor-pointer text-md md:text-4xl lg:text-[1.5vw] justify-center flex'>
-                    Talk with UnderMouse
+                <MotionButton className='cursor-pointer text-md md:text-4xl lg:text-[1.5vw] justify-center flex px-8 py-3  '>
+                    Let&apos;s Talk Websites
                 </MotionButton>
             </div>
             <Image
@@ -44,7 +44,6 @@ export const Section1 = ({
                 height={200}
                 className='absolute -z-10 top-[0vh] md:top-[20vh] lg:top-[20vh] right-3 md:right-[5vh] lg:right-[20vh]'
             />
-
             <Image
                 src='/logo_new.png'
                 alt='img'

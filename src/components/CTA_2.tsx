@@ -25,7 +25,7 @@ export default function CTA_2() {
         }
     }, [])
     return (
-        <h1 className='text-[7.5vw]' ref={textRef}>
+        <h1 className='text-[4.5vh] font-bold' ref={textRef}>
             UnderMouse <br /> Web Services
         </h1>
     )
