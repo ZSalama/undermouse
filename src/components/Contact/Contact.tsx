@@ -52,9 +52,10 @@ export default function Contact() {
         <Form {...form}>
             <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className='mx-auto pl-10 md:pl-[10vh] lg:pl-[20vh] bg-white p-8 rounded-xl shadow-md space-y-6'
+                className='mx-auto p-5 md:p-[5vh] lg:p-[10vh] bg-white max-w-[90vw] md:max-w-[80vw] lg:max-w-[60vw] not-last:rounded-xl shadow-md space-y-6'
+                id='contact'
             >
-                <div className='grid grid-cols-1 md:grid-cols-1 gap-6'>
+                <div className='grid grid-cols-1 md:grid-cols-1 gap-6 max-w-[90vw] md:max-w-[80vw] lg:max-w-[60vw] mx-auto'>
                     <FormField
                         control={form.control}
                         name='name'
@@ -138,7 +139,7 @@ export default function Contact() {
 
                 <Button
                     type='submit'
-                    className='w-full md:w-auto bg-[var(--sidebar)] hover:bg-[var(--sidebar-accent] text-white font-medium transition-colors'
+                    className='w-full md:w-auto bg-[var(--sidebar)] hover:bg-[var(--sidebar-accent] font-medium transition-colors justify-center items-center'
                 >
                     Send Message
                 </Button>

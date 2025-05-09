@@ -26,7 +26,7 @@ const MotionButton: React.FC<MotionButtonProps> = ({
 }) => {
     return (
         <motion.a
-            href='/animations'
+            href='#contact'
             className='bg-[var(--sidebar)] px-8 py-3 rounded-lg w-fit shadow-[0_2px_8px_rgba(0,0,0,0.1)]'
             initial={initial}
             animate={animate}

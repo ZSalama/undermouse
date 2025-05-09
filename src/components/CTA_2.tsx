@@ -18,7 +18,7 @@ export default function CTA_2() {
             opacity: 0,
             y: -80,
             stagger: 0.1,
-            duration: 2,
+            duration: 1,
         })
         return () => {
             splitText.revert()
@@ -26,8 +26,7 @@ export default function CTA_2() {
     }, [])
     return (
         <h1 className='text-[7.5vw]' ref={textRef}>
-            Let&apos;s Talk <br />
-            Websites
+            UnderMouse <br /> Web Services
         </h1>
     )
 }

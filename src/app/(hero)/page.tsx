@@ -13,6 +13,7 @@ import Services from '@/components/Services/Services'
 // import Contact from '@/components/Contact/Contact'
 // import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import { Computer, Search, WandSparkles } from 'lucide-react'
 
 interface SlideProps {
     direction: 'left' | 'right'
@@ -84,13 +85,27 @@ export default function Hero() {
                         <div className='h-[20vh]' />
                         <div ref={text_container}>
                             <Slide
-                                src='/beach.jpg'
+                                src='computer'
                                 direction={'left'}
                                 left={'-40%'}
                                 progress={text_parallax.scrollYProgress}
-                                text={'front-end web developer'}
+                                text={'Web Developer'}
                             />
                             <Slide
+                                src='search'
+                                direction={'right'}
+                                left={'-40%'}
+                                progress={text_parallax.scrollYProgress}
+                                text={'SEO Expert'}
+                            />
+                            <Slide
+                                src='wand'
+                                direction={'left'}
+                                left={'-40%'}
+                                progress={text_parallax.scrollYProgress}
+                                text={'Detail Oriented'}
+                            />
+                            {/* <Slide
                                 src='/beach2.jpg'
                                 direction={'right'}
                                 left={'-25%'}
@@ -103,7 +118,7 @@ export default function Hero() {
                                 left={'-75%'}
                                 progress={text_parallax.scrollYProgress}
                                 text={'monkeybusiness-end web developer'}
-                            />
+                            /> */}
                         </div>
                         <div className='h-[40vh]' />
                     </div>
@@ -130,24 +145,40 @@ const Slide = (props: SlideProps) => {
             style={{ x: translateX, left: props.left }}
             className='relative flex whitespace-nowrap'
         >
-            <Phrase src={props.src} text={'front-end web developer'} />
-            <Phrase src={props.src} text={'Full Stack web developer'} />
-            <Phrase src={props.src} text={'yep nodders'} />
+            <Phrase src={props.src} text={String(props.text)} />
+            <Phrase src={props.src} text={String(props.text)} />
+            <Phrase src={props.src} text={String(props.text)} />
         </motion.div>
     )
 }
 
 const Phrase = ({ src, text }: { src: string; text: string }) => {
     return (
-        <div className={'px-5 flex gap-5 items-center'}>
+        <div className={'px-2 flex gap-2 items-center'}>
             <p className='text-[7.5vw]'>{text}</p>
-            <span className='relative h-[7.5vw] aspect-[4/2] rounded-full overflow-hidden'>
-                <Image
+            <span className='flex h-[7.5vw] aspect-[4/2] rounded-full justify-center items-center'>
+                {/* <Image
                     style={{ objectFit: 'cover' }}
                     src={src}
                     alt='image'
                     fill
-                />
+                /> */}
+                {src === 'computer' ? (
+                    <Computer
+                        className='w-12 md:w-18 lg:w-24 h-12 md:h-18 lg:h-24'
+                        color='var(--sidebar)'
+                    />
+                ) : src === 'wand' ? (
+                    <WandSparkles
+                        className='w-12 md:w-18 lg:w-24 h-12 md:h-18 lg:h-24'
+                        color='var(--sidebar)'
+                    />
+                ) : (
+                    <Search
+                        className='w-12 md:w-18 lg:w-24 h-12 md:h-18 lg:h-24'
+                        color='var(--sidebar)'
+                    />
+                )}
             </span>
         </div>
     )
