@@ -45,10 +45,16 @@ export default function ParallaxImage({ src, alt, height = 500, speed = 0.5 }) {
         <div
             style={{
                 position: 'relative',
+                display: 'block',
                 overflow: 'hidden',
                 height: `${height}px`,
                 marginBottom: `-${extra}px`, // ← slide next section up
                 marginTop: `5rem`,
+                justifyContent: 'center',
+                alignItems: 'center',
+                // display: 'flex',
+                // backgroundColor: 'black',
+                margin: 'auto',
             }}
         >
             <img
@@ -59,7 +65,7 @@ export default function ParallaxImage({ src, alt, height = 500, speed = 0.5 }) {
                     position: 'absolute',
                     top: 0,
                     left: 0,
-                    width: '100%',
+                    width: '20%',
                     height: `${height + extra}px`, // same as height*(1+speed)
                     objectFit: 'cover',
                     willChange: 'transform',

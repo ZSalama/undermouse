@@ -3,15 +3,17 @@ import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { SplitText } from 'gsap/SplitText'
 
-const words = [
-    'Websites',
-    'Strategy',
-    'Domains',
-    'Hosting',
-    'Marketing',
-    'Design',
-    'SEO',
-]
+// const words = [
+//     'Websites',
+//     'Strategy',
+//     'Domains',
+//     'Hosting',
+//     'Marketing',
+//     'Design',
+//     'SEO',
+// ]
+
+const words = ['Succeed', 'Grow', 'Profit', 'Scale', 'Design', 'Thrive']
 
 gsap.registerPlugin(SplitText)
 
@@ -75,12 +77,12 @@ export default function CTA({ className }: { className?: string }) {
     }, [])
 
     return (
-        <section className={`${className} z-10`}>
-            <h1 ref={revealRef}>
-                Let&apos;s Talk
-                <br />
+        <div className={`${className}`}>
+            <p ref={revealRef}>
+                {/* Let&apos;s Talk */}
+                {/* <br /> */}
                 <span ref={textRef}>{words[0]}</span>
-            </h1>
-        </section>
+            </p>
+        </div>
     )
 }
