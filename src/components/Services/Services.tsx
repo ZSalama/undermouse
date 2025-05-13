@@ -10,14 +10,20 @@ interface Props {
     value: [string, string]
 }
 
+// const words: [string, string][] = [
+//     ['Branding', '#branding'],
+//     ['Analytics', '#analytics'],
+//     ['Design', '#design'],
+//     ['SEO', '#SEO_anchor'],
+//     ['Mobile', '#mobile'],
+//     ['UX/UI', '#UX'],
+//     ['And More', '#andMore'],
+// ]
+
 const words: [string, string][] = [
-    ['Branding', '#branding'],
     ['Analytics', '#analytics'],
-    ['Design', '#design'],
-    ['SEO', '#SEO_anchor'],
-    ['Mobile', '#mobile'],
-    ['UX/UI', '#UX'],
-    ['And More', '#andMore'],
+    ['About', '#about'],
+    ['Portoflio', '#portfolio'],
 ]
 
 export default function Services() {
