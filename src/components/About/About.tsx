@@ -8,20 +8,17 @@ type Props = {
 export default function About({ className }: Props) {
     return (
         <section
-            className={`${className} relative mx-4 md:mx-auto p-5 md:p-8 lg:p-12 bg-white max-w-xl md:max-w-2xl lg:max-w-4xl rounded-xl shadow-md space-y-6' `}
+            className={`relative p-5 md:p-8 lg:p-12 bg-white gap-6 mx-4 md:mx-auto w-xl md:w-2xl lg:w-4xl rounded-xl shadow-md ${className}`}
         >
-            {/* Absolutely positioned image */}
-            <div className='absolute top-[-100] right-5 md:top-[-150] md:right-20 p-4'>
-                <div className='relative w-30 h-40 md:w-40 md:h-60 lg:w-40 lg:h-60'>
-                    <Image
-                        src='/undermouse_profile.png'
-                        alt='profile picture'
-                        fill
-                        className='rounded-lg border-b-4 border-r-4 object-cover'
-                    />
-                </div>
+            <div className='absolute top-[-80px] md:top-[-120px] right-[40px] md:right-[80px] lg:right-[20%] w-30 h-40 md:w-40 md:h-56'>
+                <Image
+                    src='/undermouse_profile.png'
+                    alt='profile picture'
+                    fill
+                    className='rounded-lg border-b-4 border-r-4 object-cover'
+                />
             </div>
-            <div className=''>
+            <div>
                 <h2 className='font-bold text-xl pt-15 md:pt-4'>
                     Meet the UnderMouse!
                 </h2>

@@ -16,6 +16,7 @@ import { Computer, Search, WandSparkles } from 'lucide-react'
 // import AndMore from '@/components/AndMore'
 import About from '@/components/About/About'
 import ScrollingText from '@/components/ScrollingText/ScrollingText'
+import Footer from '@/components/Footer/Footer'
 
 interface SlideProps {
     direction: 'left' | 'right'
@@ -58,7 +59,7 @@ export default function Hero() {
             <div className='bg-gray-200'>
                 <div
                     ref={container}
-                    className='relative h-[200vh] bg-gray-200  align-center mx-auto'
+                    className='relative h-[200vh] bg-gray-200   align-center mx-auto'
                 >
                     <motion.div
                         id='scroll-indicator'
@@ -78,13 +79,18 @@ export default function Hero() {
                     <Section1 scrollYProgress={scrollYProgress} />
                     <Section2 scrollYProgress={scrollYProgress} />
                 </div>
-                <div className='flex flex-col overflow-x-hidden'>
-                    <ScrollingText />
+                <ScrollingText />
+                <div className='flex justify-center'>
                     <About className='mt-50 md:mt-20' />
-                    <div className='h-full bg-gray-200 pt-5 mt-50 md:mt-20'>
-                        <Contact />
-                    </div>
                 </div>
+
+                <div className='flex justify-center mt-15'>
+                    <Contact className='h-full bg-gray-200 pt-5 mb-50 md:mb-20' />
+                </div>
+
+                <footer className='flex justify-center bg-white'>
+                    <Footer className='h-full pt-5' />
+                </footer>
             </div>
         </>
     )

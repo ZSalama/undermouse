@@ -18,7 +18,11 @@ import { formSchema } from '@/lib/types'
 
 type FormSchema = z.infer<typeof formSchema>
 
-export default function Contact() {
+type Props = {
+    className?: string
+}
+
+export default function Contact({ className }: Props) {
     const form = useForm<FormSchema>({
         // @ts-ignore
         resolver: zodResolver(formSchema),
@@ -49,13 +53,15 @@ export default function Contact() {
     }
 
     return (
-        <Form {...form}>
-            <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className=''
-                id='contact'
-            >
-                <div className='flex flex-col p-5 md:p-8 lg:p-12 bg-white gap-6 mx-4 md:mx-auto max-w-xl md:max-w-2xl lg:max-w-4xl rounded-xl shadow-md'>
+        <section
+            className={`${className} flex flex-col p-5 md:p-8 lg:p-12 bg-white gap-6 mx-4 md:mx-auto w-xl md:w-2xl lg:w-4xl rounded-xl shadow-md`}
+            id='contact'
+        >
+            <Form {...form}>
+                <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className='flex flex-col gap-6'
+                >
                     <FormField
                         control={form.control}
                         name='name'
@@ -141,8 +147,8 @@ export default function Contact() {
                     >
                         Send Message
                     </Button>
-                </div>
-            </form>
-        </Form>
+                </form>
+            </Form>
+        </section>
     )
 }

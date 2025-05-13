@@ -38,7 +38,7 @@ export default function ScrollingText() {
                     direction={'left'}
                     left={'-40%'}
                     progress={text_parallax.scrollYProgress}
-                    text={'Custom Designs'}
+                    text={'Custom Backend'}
                 />
             </div>
             <div className='h-[10vh]' />
