@@ -52,15 +52,15 @@ export default function Contact() {
         <Form {...form}>
             <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className='mx-auto p-5 md:p-[5vh] lg:p-[10vh] bg-white max-w-[90vw] md:max-w-[80vw] lg:max-w-[60vw] not-last:rounded-xl shadow-md space-y-6'
+                className=''
                 id='contact'
             >
-                <div className='grid grid-cols-1 md:grid-cols-1 gap-6 max-w-[90vw] md:max-w-[80vw] lg:max-w-[60vw] mx-auto'>
+                <div className='flex flex-col p-5 md:p-8 lg:p-12 bg-white gap-6 mx-4 md:mx-auto max-w-xl md:max-w-2xl lg:max-w-4xl rounded-xl shadow-md'>
                     <FormField
                         control={form.control}
                         name='name'
                         render={({ field }) => (
-                            <FormItem className='col-span-1'>
+                            <FormItem>
                                 <FormLabel>Name</FormLabel>
                                 <FormControl>
                                     <Input
@@ -80,7 +80,7 @@ export default function Contact() {
                         control={form.control}
                         name='email'
                         render={({ field }) => (
-                            <FormItem className='col-span-1'>
+                            <FormItem>
                                 <FormLabel>Email</FormLabel>
                                 <FormControl>
                                     <Input
@@ -119,7 +119,7 @@ export default function Contact() {
                         control={form.control}
                         name='message'
                         render={({ field }) => (
-                            <FormItem className='col-span-full'>
+                            <FormItem>
                                 <FormLabel>Message</FormLabel>
                                 <FormControl>
                                     <textarea
@@ -135,14 +135,13 @@ export default function Contact() {
                             </FormItem>
                         )}
                     />
+                    <Button
+                        type='submit'
+                        className='cursor-pointer w-fit text-sm md:text-md lg:text-lg p-6 bg-[var(--sidebar)] hover:bg-[var(--sidebar-foreground)] font-medium transition-colors justify-center items-center text-black hover:text-[var(--sidebar)]'
+                    >
+                        Send Message
+                    </Button>
                 </div>
-
-                <Button
-                    type='submit'
-                    className='cursor-pointer w-full md:w-auto bg-[var(--sidebar)] hover:bg-[var(--sidebar-foreground)] font-medium transition-colors justify-center items-center text-black hover:text-[var(--sidebar)]'
-                >
-                    Send Message
-                </Button>
             </form>
         </Form>
     )
