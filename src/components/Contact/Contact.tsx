@@ -24,7 +24,6 @@ type Props = {
 
 export default function Contact({ className }: Props) {
     const form = useForm<FormSchema>({
-        // @ts-ignore
         resolver: zodResolver(formSchema),
         defaultValues: {
             name: '',

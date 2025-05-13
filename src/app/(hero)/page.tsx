@@ -1,12 +1,12 @@
 'use client'
-import { useScroll, MotionValue, useTransform, motion } from 'framer-motion'
+import { useScroll, motion } from 'framer-motion'
 import Lenis from 'lenis'
 import { useEffect, useRef } from 'react'
 import { Section1 } from '@/components/Section1'
 import { Section2 } from '@/components/Section2'
 // import Services from '@/components/Services/Services'
 import dynamic from 'next/dynamic'
-import { Computer, Search, WandSparkles } from 'lucide-react'
+// import { Computer, Search, WandSparkles } from 'lucide-react'
 // import Branding from '@/components/Branding'
 // import Analytics from '@/components/Analytics'
 // import Design from '@/components/Design'
@@ -18,13 +18,13 @@ import About from '@/components/About/About'
 import ScrollingText from '@/components/ScrollingText/ScrollingText'
 import Footer from '@/components/Footer/Footer'
 
-interface SlideProps {
-    direction: 'left' | 'right'
-    progress: MotionValue<number>
-    src: string
-    left: string
-    text: string
-}
+// interface SlideProps {
+//     direction: 'left' | 'right'
+//     progress: MotionValue<number>
+//     src: string
+//     left: string
+//     text: string
+// }
 
 const Contact = dynamic(() => import('@/components/Contact/Contact'), {
     ssr: false,
