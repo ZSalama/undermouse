@@ -19,20 +19,20 @@ export default function About({ className }: Props) {
                 />
             </div>
             <div>
-                <h2 className='font-bold text-xl pt-15 md:pt-4'>
+                <h2 className='font-bold text-2xl pt-15 md:pt-4'>
                     Meet the UnderMouse!
                 </h2>
-                <p className='text-md pt-0 md:pt-8 lg:pt-8 text-wrap'>
-                    Hi, I&apos;m Zack Salama - founder of Undermouse and a
-                    full-stack web developer. I build web apps that are fast and
-                    responsive. I use modern tech to make sure your site runs
-                    smoothly on every device - from the latest iPhone to that
-                    off-brand tablet your uncle swears by. It&apos;ll be secure,
-                    scalable, and won&apos;t mysteriously break. SEO,
-                    accessibility, performance - I sweat the small stuff so you
+                <p className='text-md pt-0 md:pt-8 lg:pt-8 text-justify'>
+                    Hi, I&apos;m Zack Salama - founder of UnderMouse and a
+                    full-stack web app developer. I build apps that are fast,
+                    responsive, and designed to run smoothly on every device,
+                    including the latest iPhone and that off-brand tablet your
+                    uncle insists is &quot;just as good.&quot; Your product will
+                    be secure, scalable, and won&apos;t mysteriously break. SEO,
+                    accessibility, performance. I sweat the small stuff so you
                     don&apos;t have to. You dream it, I build it, and we both
-                    pretend it was easy. Let&apos;s make the web a little better
-                    — or at least a little cooler.
+                    pretend it was easy. Let&apos;s make the web a little
+                    better. Or at least a little cooler.
                 </p>
             </div>
         </section>
