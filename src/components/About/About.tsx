@@ -11,9 +11,9 @@ export default function About({ className }: Props) {
             <section
                 className={`relative p-5 md:p-8 lg:p-12 bg-white gap-6 mx-4 md:mx-auto w-xl md:w-2xl lg:w-4xl rounded-xl shadow-md ${className}`}
             >
-                <div className='absolute top-[-80px] md:top-[-120px] right-[10px] md:right-[80px] lg:right-[20%] w-30 h-40 md:w-40 md:h-56'>
+                <div className='absolute top-[-80px] md:top-[-120px] right-[10px] md:right-[80px] lg:right-[20%] w-25 h-35 md:w-40 md:h-56'>
                     <Image
-                        src='/undermouse_profile.png'
+                        src='/undermouse_profile_og_cropped.webp'
                         alt='profile picture'
                         fill
                         className='rounded-lg border-b-4 border-r-4 object-cover'

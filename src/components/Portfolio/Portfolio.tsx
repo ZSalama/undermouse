@@ -47,7 +47,7 @@ export default function Portfolio({ className }: Props) {
                                 max: 2000,
                                 min: 1024,
                             },
-                            items: 3,
+                            items: 2,
                             partialVisibilityGutter: 40,
                         },
                         mobile: {
@@ -89,7 +89,7 @@ export default function Portfolio({ className }: Props) {
                     <Card className='bg-white'>
                         <CardHeader>
                             <CardTitle className='text-3xl'>
-                                Art Gallery
+                                RL Painting Solutions
                             </CardTitle>
                             {/* <CardDescription>Card Description</CardDescription> */}
                         </CardHeader>
@@ -97,7 +97,7 @@ export default function Portfolio({ className }: Props) {
                         <CardContent className='flex justify-center'>
                             {/* <p>Card Content</p> */}
                             <Image
-                                src='/undermouse_profile.png'
+                                src='/rlpaintingsolutions.png'
                                 alt='profile pic'
                                 width={300}
                                 height={200}
@@ -106,12 +106,12 @@ export default function Portfolio({ className }: Props) {
                         </CardContent>
                         <CardFooter className='justify-center flex'>
                             <p className='text-lg'>
-                                Category: e-commerce <br /> Link:{' '}
+                                Category: Landing Page <br /> Link:{' '}
                                 <Link
-                                    href='https://val-gallery.vercel.app'
+                                    href='https://rlpaintingsolutions.com'
                                     className='underline underline-offset-1'
                                 >
-                                    val-gallery.vercel.app
+                                    rlpaintingsolutions.com
                                 </Link>
                             </p>
                         </CardFooter>
@@ -119,7 +119,7 @@ export default function Portfolio({ className }: Props) {
                     <Card className='bg-white'>
                         <CardHeader>
                             <CardTitle className='text-3xl'>
-                                Art Gallery
+                                Val Art Gallery
                             </CardTitle>
                             {/* <CardDescription>Card Description</CardDescription> */}
                         </CardHeader>
@@ -127,7 +127,7 @@ export default function Portfolio({ className }: Props) {
                         <CardContent className='flex justify-center'>
                             {/* <p>Card Content</p> */}
                             <Image
-                                src='/undermouse_profile.png'
+                                src='/val_gallery_preview.png'
                                 alt='profile pic'
                                 width={300}
                                 height={200}
@@ -136,7 +136,7 @@ export default function Portfolio({ className }: Props) {
                         </CardContent>
                         <CardFooter className='justify-center flex'>
                             <p className='text-lg'>
-                                Category: e-commerce <br /> Link:{' '}
+                                Category: E-commerce <br /> Link:{' '}
                                 <Link
                                     href='https://val-gallery.vercel.app'
                                     className='underline underline-offset-1'

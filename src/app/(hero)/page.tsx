@@ -81,13 +81,13 @@ export default function Hero() {
                     <Section2 scrollYProgress={scrollYProgress} />
                 </div>
                 <ScrollingText />
-                <div className='text-center text-5xl  mt-50 md:mt-20'>
+                <div className=' px-5 md:px-8 bg-gray-200 lg:px-12 text-5xl font-bold mx-4 md:mx-auto md:w-2xl lg:w-4xl'>
                     About
                 </div>
                 <div className='flex justify-center'>
-                    <About className='mt-30 md:mb-20' />
+                    <About className='mt-10 md:mb-20' />
                 </div>
-                <div className='text-5xl max-w-4xl mx-auto mt-50 md:mt-20 pl-8'>
+                <div className='mt-20 px-5 md:px-8 bg-gray-200 lg:px-12 text-5xl font-bold mx-4 md:mx-auto md:w-2xl lg:w-4xl'>
                     Portfolio
                 </div>
                 <div className='flex justify-center max-w-4xl mx-auto'>
@@ -95,7 +95,7 @@ export default function Hero() {
                 </div>
 
                 <div
-                    className='text-center text-5xl mt-50 md:mt-20'
+                    className=' px-5 md:px-8 bg-gray-200 lg:px-12 text-5xl font-bold mx-4 md:mx-auto md:w-2xl lg:w-4xl'
                     id='contact'
                 >
                     Contact
