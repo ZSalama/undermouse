@@ -87,13 +87,19 @@ export default function Hero() {
                 <div className='flex justify-center'>
                     <About className='mt-30 md:mb-20' />
                 </div>
-                <div className='text-center text-5xl mt-50 md:mt-20'>
+                <div className='text-5xl max-w-4xl mx-auto mt-50 md:mt-20 pl-8'>
                     Portfolio
                 </div>
-                <div className='flex justify-center '>
-                    <Portfolio className='mb-20 mt-10 md:mt-20' />
+                <div className='flex justify-center max-w-4xl mx-auto'>
+                    <Portfolio className='mb-20 mt-10 md:mt-10' />
                 </div>
 
+                <div
+                    className='text-center text-5xl mt-50 md:mt-20'
+                    id='contact'
+                >
+                    Contact
+                </div>
                 <div className='flex justify-center mt-15'>
                     <Contact className='h-full bg-gray-200 pt-5 mb-50 md:mb-20' />
                 </div>
