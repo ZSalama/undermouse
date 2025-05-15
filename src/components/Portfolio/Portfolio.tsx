@@ -89,36 +89,6 @@ export default function Portfolio({ className }: Props) {
                     <Card className='bg-white'>
                         <CardHeader>
                             <CardTitle className='text-3xl'>
-                                RL Painting Solutions
-                            </CardTitle>
-                            {/* <CardDescription>Card Description</CardDescription> */}
-                        </CardHeader>
-
-                        <CardContent className='flex justify-center'>
-                            {/* <p>Card Content</p> */}
-                            <Image
-                                src='/rlpaintingsolutions.png'
-                                alt='profile pic'
-                                width={300}
-                                height={200}
-                                className='rounded-xl'
-                            />
-                        </CardContent>
-                        <CardFooter className='justify-center flex'>
-                            <p className='text-lg'>
-                                Category: Landing Page <br /> Link:{' '}
-                                <Link
-                                    href='https://rlpaintingsolutions.com'
-                                    className='underline underline-offset-1'
-                                >
-                                    rlpaintingsolutions.com
-                                </Link>
-                            </p>
-                        </CardFooter>
-                    </Card>
-                    <Card className='bg-white'>
-                        <CardHeader>
-                            <CardTitle className='text-3xl'>
                                 Val Art Gallery
                             </CardTitle>
                             {/* <CardDescription>Card Description</CardDescription> */}
@@ -140,8 +110,74 @@ export default function Portfolio({ className }: Props) {
                                 <Link
                                     href='https://val-gallery.vercel.app'
                                     className='underline underline-offset-1'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
                                 >
                                     val-gallery.vercel.app
+                                </Link>
+                            </p>
+                        </CardFooter>
+                    </Card>
+                    <Card className='bg-white'>
+                        <CardHeader>
+                            <CardTitle className='text-3xl'>
+                                RL Painting Solutions
+                            </CardTitle>
+                            {/* <CardDescription>Card Description</CardDescription> */}
+                        </CardHeader>
+
+                        <CardContent className='flex justify-center'>
+                            {/* <p>Card Content</p> */}
+                            <Image
+                                src='/rlpaintingsolutions.png'
+                                alt='profile pic'
+                                width={300}
+                                height={200}
+                                className='rounded-xl'
+                            />
+                        </CardContent>
+                        <CardFooter className='justify-center flex'>
+                            <p className='text-lg'>
+                                Category: Landing Page <br /> Link:{' '}
+                                <Link
+                                    href='https://rlpaintingsolutions.com'
+                                    className='underline underline-offset-1'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    rlpaintingsolutions.com
+                                </Link>
+                            </p>
+                        </CardFooter>
+                    </Card>
+                    <Card className='bg-white'>
+                        <CardHeader>
+                            <CardTitle className='text-3xl'>
+                                Restaurant Template
+                            </CardTitle>
+                            {/* <CardDescription>Card Description</CardDescription> */}
+                        </CardHeader>
+
+                        <CardContent className='flex justify-center'>
+                            {/* <p>Card Content</p> */}
+                            <Image
+                                src='/restaurant_template.png'
+                                alt='profile pic'
+                                width={300}
+                                height={200}
+                                className='rounded-xl'
+                            />
+                        </CardContent>
+                        <CardFooter className='justify-center flex'>
+                            <p className='text-lg'>
+                                Category: Practice <br /> Link:{' '}
+                                <Link
+                                    href='https://restaurant-template-beige.vercel.app/'
+                                    className='underline underline-offset-1'
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                >
+                                    restaurant-template-beige.vercel.app
                                 </Link>
                             </p>
                         </CardFooter>

@@ -97,6 +97,7 @@ const Slide = (props: SlideProps) => {
             <Phrase src={props.src} text={String(props.text)} />
             <Phrase src={props.src} text={String(props.text)} />
             <Phrase src={props.src} text={String(props.text)} />
+            <Phrase src={props.src} text={String(props.text)} />
         </motion.div>
     )
 }
