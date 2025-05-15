@@ -97,7 +97,7 @@ export default function Portfolio({ className }: Props) {
                         <CardContent className='flex justify-center'>
                             {/* <p>Card Content</p> */}
                             <Image
-                                src='/val_gallery_preview.png'
+                                src='/val_gallery_pre.png'
                                 alt='profile pic'
                                 width={300}
                                 height={200}
@@ -129,7 +129,7 @@ export default function Portfolio({ className }: Props) {
                         <CardContent className='flex justify-center'>
                             {/* <p>Card Content</p> */}
                             <Image
-                                src='/rlpaintingsolutions.png'
+                                src='/rlpaintingsolutions_prev.png'
                                 alt='profile pic'
                                 width={300}
                                 height={200}
@@ -161,7 +161,7 @@ export default function Portfolio({ className }: Props) {
                         <CardContent className='flex justify-center'>
                             {/* <p>Card Content</p> */}
                             <Image
-                                src='/restaurant_template.png'
+                                src='/restaurant_template_prev.png'
                                 alt='profile pic'
                                 width={300}
                                 height={200}
