@@ -1,15 +1,14 @@
-# Portfolio website
+undermouse.com
+
+```bash
+pnpm install
+pnpm dev
+```
 
 ## Tech stack
 
-### Back-end
+Back-end: Next.js
 
-Next.js
+Front-end: React
 
-### Front-end
-
-React
-
-### Hosting
-
-Vercel
+Hosting: Vercel

@@ -17,6 +17,7 @@ import dynamic from 'next/dynamic'
 import About from '@/components/About/About'
 import ScrollingText from '@/components/ScrollingText/ScrollingText'
 import Footer from '@/components/Footer/Footer'
+import Portfolio from '@/components/Portfolio/Portfolio'
 
 // interface SlideProps {
 //     direction: 'left' | 'right'
@@ -80,10 +81,25 @@ export default function Hero() {
                     <Section2 scrollYProgress={scrollYProgress} />
                 </div>
                 <ScrollingText />
+                <div className=' px-5 md:px-8 bg-gray-200 lg:px-12 text-5xl font-bold mx-4 md:mx-auto md:w-2xl lg:w-4xl'>
+                    About
+                </div>
                 <div className='flex justify-center'>
-                    <About className='mt-50 md:mt-20' />
+                    <About className='mt-10 md:mb-20' />
+                </div>
+                <div className='mt-20 px-5 md:px-8 bg-gray-200 lg:px-12 text-5xl font-bold mx-4 md:mx-auto md:w-2xl lg:w-4xl'>
+                    Portfolio
+                </div>
+                <div className='flex justify-center max-w-4xl mx-auto'>
+                    <Portfolio className='mb-20 mt-10 md:mt-10' />
                 </div>
 
+                <div
+                    className=' px-5 md:px-8 bg-gray-200 lg:px-12 text-5xl font-bold mx-4 md:mx-auto md:w-2xl lg:w-4xl'
+                    id='contact'
+                >
+                    Contact
+                </div>
                 <div className='flex justify-center mt-15'>
                     <Contact className='h-full bg-gray-200 pt-5 mb-50 md:mb-20' />
                 </div>

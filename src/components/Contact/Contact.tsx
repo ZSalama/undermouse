@@ -53,8 +53,7 @@ export default function Contact({ className }: Props) {
 
     return (
         <section
-            className={`${className} flex flex-col p-5 md:p-8 lg:p-12 bg-white gap-6 mx-4 md:mx-auto w-xl md:w-2xl lg:w-4xl rounded-xl shadow-md`}
-            id='contact'
+            className={`${className} flex flex-col p-5 md:p-8 lg:p-12 bg-white gap-6 mx-4 md:mx-auto w-xl md:w-2xl lg:w-4xl rounded-xl text-lg shadow-md`}
         >
             <Form {...form}>
                 <form
@@ -66,7 +65,7 @@ export default function Contact({ className }: Props) {
                         name='name'
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Name</FormLabel>
+                                <FormLabel className='text-lg'>Name</FormLabel>
                                 <FormControl>
                                     <Input
                                         {...field}
@@ -74,7 +73,7 @@ export default function Contact({ className }: Props) {
                                         className='w-full'
                                     />
                                 </FormControl>
-                                <FormDescription>
+                                <FormDescription className='text-sm'>
                                     What should we call you?
                                 </FormDescription>
                                 <FormMessage />
@@ -86,7 +85,7 @@ export default function Contact({ className }: Props) {
                         name='email'
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Email</FormLabel>
+                                <FormLabel className='text-lg'>Email</FormLabel>
                                 <FormControl>
                                     <Input
                                         {...field}
@@ -107,7 +106,9 @@ export default function Contact({ className }: Props) {
                         name='favoriteColor'
                         render={({ field }) => (
                             <FormItem className='col-span-1 hidden '>
-                                <FormLabel>Favorite Color</FormLabel>
+                                <FormLabel className='text-lg'>
+                                    Favorite Color
+                                </FormLabel>
                                 <FormControl>
                                     <Input
                                         {...field}
@@ -125,16 +126,18 @@ export default function Contact({ className }: Props) {
                         name='message'
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Message</FormLabel>
+                                <FormLabel className='text-lg'>
+                                    Message
+                                </FormLabel>
                                 <FormControl>
                                     <textarea
                                         {...field}
                                         placeholder='How can we help?'
-                                        className='w-full h-32 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--sidebar)]'
+                                        className='text-sm w-full h-32 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--sidebar)]'
                                     />
                                 </FormControl>
                                 <FormDescription>
-                                    Tell us what’s on your mind.
+                                    Tell us what&apos;s on your mind.
                                 </FormDescription>
                                 <FormMessage />
                             </FormItem>
@@ -142,7 +145,7 @@ export default function Contact({ className }: Props) {
                     />
                     <Button
                         type='submit'
-                        className='cursor-pointer w-fit text-sm md:text-md lg:text-lg p-6 bg-[var(--sidebar)] hover:bg-[var(--sidebar-foreground)] font-medium transition-colors justify-center items-center text-black hover:text-[var(--sidebar)]'
+                        className='cursor-pointer w-fit text-lg p-6 bg-[var(--sidebar)] hover:bg-[var(--sidebar-foreground)] font-medium transition-colors justify-center items-center text-black hover:text-[var(--sidebar)]'
                     >
                         Send Message
                     </Button>
