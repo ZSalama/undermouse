@@ -95,7 +95,7 @@ export default function Contact({ className }: Props) {
                                     />
                                 </FormControl>
                                 <FormDescription>
-                                    We’ll never share your email.
+                                    So I can get back to you.
                                 </FormDescription>
                                 <FormMessage />
                             </FormItem>
@@ -132,12 +132,12 @@ export default function Contact({ className }: Props) {
                                 <FormControl>
                                     <textarea
                                         {...field}
-                                        placeholder='How can we help?'
+                                        placeholder='I would like to...'
                                         className='text-sm w-full h-32 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--sidebar)]'
                                     />
                                 </FormControl>
                                 <FormDescription>
-                                    Tell us what&apos;s on your mind.
+                                    How can we help?
                                 </FormDescription>
                                 <FormMessage />
                             </FormItem>
