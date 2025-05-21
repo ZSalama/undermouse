@@ -17,7 +17,7 @@ export default function ScrollingText() {
         offset: ['start end', 'end start'],
     })
     return (
-        <div className='overflow-hidden bg-gray-200'>
+        <div className='overflow-hidden bg-gray-200 mt-20'>
             <div ref={text_container}>
                 <Slide
                     src='computer'
@@ -62,17 +62,17 @@ const Phrase = ({ src, text }: { src: string; text: string }) => {
                 {src === 'computer' ? (
                     <Computer
                         className='w-8 md:w-18 lg:w-24 h-12 md:h-18 lg:h-24'
-                        color='var(--sidebar)'
+                        color='var(--paralax)'
                     />
                 ) : src === 'wand' ? (
                     <WandSparkles
                         className='w-8 md:w-18 lg:w-24 h-12 md:h-18 lg:h-24'
-                        color='var(--sidebar)'
+                        color='var(--paralax)'
                     />
                 ) : (
                     <Search
                         className='w-8 md:w-18 lg:w-24 h-12 md:h-18 lg:h-24'
-                        color='var(--sidebar)'
+                        color='var(--paralax)'
                     />
                 )}
             </span>

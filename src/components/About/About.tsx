@@ -23,7 +23,7 @@ export default function About({ className }: Props) {
                     <h2 className='text-3xl pt-20 md:pt-4 w-full'>
                         Meet the UnderMouse!
                     </h2>
-                    <p className='text-lg pt-4 md:pt-8 lg:pt-8 text-justify'>
+                    <p className='text-lg pt-4 md:pt-8 lg:pt-8'>
                         Hi, I&apos;m Zack Salama - founder of UnderMouse and a
                         full-stack web app developer. I build apps that are
                         fast, responsive, and designed to run smoothly on every

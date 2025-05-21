@@ -12,16 +12,15 @@ export const Section2 = ({
     return (
         <motion.div
             style={{ scale, rotate }}
-            className='relative h-screen left-[-90] md:top-0 lg:top-0'
+            className="relative h-screen bg-[var(--primary)] z-50 md:top-0 lg:top-0 bg-[url('/hero_bg_2_flipped.png')] bg-cover bg-no-repeat bg-center"
         >
-            <Image
-                src='/mousechillin_2.png'
+            {/* <Image
+                src='/hero_bg_2_flipped.png'
                 alt='img'
-                width={200}
-                height={200}
+                fill
                 className=''
                 // className='w-200 h-200'
-            />
+            /> */}
         </motion.div>
     )
 }

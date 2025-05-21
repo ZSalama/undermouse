@@ -60,7 +60,7 @@ export default function Hero() {
             <div className='bg-gray-200'>
                 <div
                     ref={container}
-                    className='relative h-[200vh] bg-gray-200   align-center mx-auto'
+                    className='relative h-[200vh] bg-gray-900   align-center mx-auto'
                 >
                     <motion.div
                         id='scroll-indicator'
@@ -81,7 +81,7 @@ export default function Hero() {
                     <Section2 scrollYProgress={scrollYProgress} />
                 </div>
                 <ScrollingText />
-                <div className=' px-5 md:px-8 bg-gray-200 lg:px-12 text-5xl font-bold mx-4 md:mx-auto md:w-2xl lg:w-4xl'>
+                <div className=' px-5 md:px-8 bg-gray-200 lg:px-12 text-5xl font-bold mx-4 md:mx-auto md:w-2xl lg:w-4xl mt-20'>
                     About
                 </div>
                 <div className='flex justify-center'>
