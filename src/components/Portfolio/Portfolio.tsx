@@ -39,7 +39,7 @@ export default function Portfolio({ className }: Props) {
 								max: 3000,
 								min: 200,
 							},
-							items: 4,
+							items: 3,
 							partialVisibilityGutter: 40,
 						},
 						desktop: {
@@ -86,20 +86,47 @@ export default function Portfolio({ className }: Props) {
 					}
 					slidesToSlide={1}
 				>
-					<Card className='bg-white h-full'>
+					<Card className='bg-white h-full justify-between'>
+						<CardHeader>
+							<CardTitle className='text-3xl'>MS-Tracker</CardTitle>
+							{/* <CardDescription>Card Description</CardDescription> */}
+						</CardHeader>
+
+						{/* <CardContent className='flex justify-center'> */}
+						<CardContent className='relative aspect-[9/6] m-8'>
+							<Image
+								src='/ms_tracker.png'
+								alt='profile pic'
+								fill
+								className='rounded-xl object-cover'
+							/>
+						</CardContent>
+						<CardFooter className='justify-center flex'>
+							<p className='text-lg'>
+								Category: Project <br /> Link:{' '}
+								<Link
+									href='https://ms-tracker.vercel.app/'
+									className='underline underline-offset-1'
+									target='_blank'
+									rel='noopener noreferrer'
+								>
+									ms-tracker.vercel.app
+								</Link>
+							</p>
+						</CardFooter>
+					</Card>
+					<Card className='bg-white h-full justify-between'>
 						<CardHeader>
 							<CardTitle className='text-3xl'>Val Art Gallery</CardTitle>
 							{/* <CardDescription>Card Description</CardDescription> */}
 						</CardHeader>
 
-						<CardContent className='flex justify-center'>
-							{/* <p>Card Content</p> */}
+						<CardContent className='relative aspect-[9/6] m-8'>
 							<Image
 								src='/val_gallery_pre.png'
 								alt='profile pic'
-								width={300}
-								height={200}
-								className='rounded-xl'
+								fill
+								className='rounded-xl object-cover'
 							/>
 						</CardContent>
 						<CardFooter className='justify-center flex'>
@@ -116,20 +143,18 @@ export default function Portfolio({ className }: Props) {
 							</p>
 						</CardFooter>
 					</Card>
-					<Card className='bg-white h-full'>
+					<Card className='bg-white h-full justify-between'>
 						<CardHeader>
 							<CardTitle className='text-3xl'>RL Painting Solutions</CardTitle>
 							{/* <CardDescription>Card Description</CardDescription> */}
 						</CardHeader>
 
-						<CardContent className='flex justify-center'>
-							{/* <p>Card Content</p> */}
+						<CardContent className='relative aspect-[9/6] m-8'>
 							<Image
 								src='/rlpaintingsolutions_prev.png'
 								alt='profile pic'
-								width={300}
-								height={200}
-								className='rounded-xl'
+								fill
+								className='rounded-xl object-cover'
 							/>
 						</CardContent>
 						<CardFooter className='justify-center flex'>
@@ -146,14 +171,13 @@ export default function Portfolio({ className }: Props) {
 							</p>
 						</CardFooter>
 					</Card>
-					<Card className='bg-white h-full'>
+
+					{/* <Card className='bg-white h-full'>
 						<CardHeader>
 							<CardTitle className='text-3xl'>Restaurant Template</CardTitle>
-							{/* <CardDescription>Card Description</CardDescription> */}
 						</CardHeader>
 
 						<CardContent className='flex justify-center'>
-							{/* <p>Card Content</p> */}
 							<Image
 								src='/restaurant_template_prev.png'
 								alt='profile pic'
@@ -175,7 +199,7 @@ export default function Portfolio({ className }: Props) {
 								</Link>
 							</p>
 						</CardFooter>
-					</Card>
+					</Card> */}
 				</Carousel>
 			</div>
 		</div>
