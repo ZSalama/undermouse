@@ -8,6 +8,9 @@ import { format } from 'date-fns'
 import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 import { Options, NodeRenderer } from '@contentful/rich-text-react-renderer'
 import { Block, Inline, Quote } from '@contentful/rich-text-types'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { FaArrowLeft } from 'react-icons/fa'
 
 interface CustomNodeRenderer {
 	[node: string]: NodeRenderer
@@ -83,8 +86,6 @@ export default async function page({
 
 	const { title, content, pictureUrl, createdAt } = post.items[0].fields
 
-	console.log(content)
-
 	return (
 		<article className='px-4 py-12'>
 			{pictureUrl && (
@@ -97,27 +98,35 @@ export default async function page({
 					}}
 				/>
 			)}
+			<div className='max-w-4xl mx-auto mb-6'>
+				<Link href='/blog' className='mb-6 inline-block '>
+					<Button className='cursor-pointer'>
+						<FaArrowLeft />
+						All Posts
+					</Button>
+				</Link>
 
-			{/* slug / meta */}
-			<p className='max-w-4xl mx-auto text-xs text-gray-400 uppercase tracking-wide mb-2'>
-				Date: {`${format(new Date(String(createdAt)), 'MMMM do, yyyy')}`}
-			</p>
+				{/* title */}
+				<h1 className='text-4xl font-extrabold text-gray-900 mb-3'>
+					{String(title)}
+				</h1>
 
-			{/* title */}
-			<h1 className='max-w-4xl mx-auto text-4xl font-extrabold text-gray-900 mb-6'>
-				{String(title)}
-			</h1>
+				{/* slug / meta */}
+				<p className='text-xs text-gray-400 uppercase tracking-wide mb-6'>
+					Date: {`${format(new Date(String(createdAt)), 'MMMM do, yyyy')}`}
+				</p>
 
-			{/* content */}
-			<div className='max-w-4xl prose prose-lg prose-headings:font-semibold mx-auto'>
-				{documentToReactComponents(content as Document, options)}
+				{/* content */}
+				<div className='max-w-4xl prose prose-lg prose-headings:font-semibold mx-auto'>
+					{documentToReactComponents(content as Document, options)}
+				</div>
+
+				{/* optional footer / ID */}
+				<footer className='mt-12 text-sm text-gray-500 border-t pt-4'>
+					{/* <p>Post ID: {id}</p> */}
+					{/* <p> temp footer </p> */}
+				</footer>
 			</div>
-
-			{/* optional footer / ID */}
-			<footer className='max-w-4xl mx-auto mt-12 text-sm text-gray-500 border-t pt-4'>
-				{/* <p>Post ID: {id}</p> */}
-				{/* <p> temp footer </p> */}
-			</footer>
 		</article>
 	)
 }

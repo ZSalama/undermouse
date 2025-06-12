@@ -1,14 +1,15 @@
+import { contentfulClient } from '@/lib/contentful'
 import '../globals.css'
 
-export default function RootLayout({
-    children,
+export default async function RootLayout({
+	children,
 }: Readonly<{
-    children: React.ReactNode
+	children: React.ReactNode
 }>) {
-    return (
-        <div>
-            {children}
-            {/* <Footer /> */}
-        </div>
-    )
+	return (
+		<div>
+			{children}
+			{/* <Footer /> */}
+		</div>
+	)
 }

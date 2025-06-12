@@ -8,87 +8,57 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import {
 	Card,
 	CardContent,
+	CardDescription,
 	CardFooter,
 	CardHeader,
 	CardTitle,
 } from '../ui/card'
 import Image from 'next/image'
 import Link from 'next/link'
+import { format } from 'date-fns'
 
-type Props = {
+export interface BlogProps {
 	className?: string
+	data: any
 }
 
-const contentfulClient = createClient({
-	space: 'x2wrt0bdfgy5',
-	accessToken: 'ghdK7NaKA8-JSPlu_cvtnoEQ4AyUUsNkh-89Z-unCCI',
-})
-
-export default function Blog(className: Props) {
-	const [data, setData] =
-		useState<
-			ReturnType<typeof contentfulClient.getEntries> extends Promise<infer T>
-				? T | null
-				: null
-		>(null)
-	const [isLoading, setLoading] = useState(true)
-
-	useEffect(() => {
-		const fetchEntries = async () => {
-			const entries = await contentfulClient.getEntries({
-				content_type: 'blog',
-				limit: 3,
-			})
-			setData(entries)
-			setLoading(false)
-		}
-		fetchEntries()
-	}, [])
-
-	if (isLoading) {
-		return (
-			<div
-				className={`${className} p-5 md:p-8 lg:p-12 bg-white gap-6 mx-4 md:mx-auto w-xl md:w-2xl lg:w-4xl rounded-xl shadow-md`}
-			>
-				Loading...
-			</div>
-		)
-	}
-
+export default function Blog({ className, data }: BlogProps) {
+	const posts = data.blog
+	console.log('Blog data from component:', data)
 	return (
 		<div
-			className={`${className} w-full text-center justify-center flex md:flex-col lg:flex-row gap-4 my-8 h-full mx-4 lg:mx-auto md:w-2xl lg:w-4xl`}
+			className={`${className} w-full text-center justify-center flex flex-col md:flex-row gap-4 my-8 mx-4 lg:mx-auto md:w-2xl lg:w-4xl`}
 		>
-			{data?.items.map((item, index) => {
-				const { title, pictureUrl } = item.fields
-
-				const wrapperClasses =
-					index === 0 ? 'block w-full' : 'hidden w-full lg:block'
+			{posts.map((item: any, index: Number) => {
+				const { title, pictureUrl, createdAt } = item.fields
 
 				return (
-					<Link
-						href={`/blog/${item.fields.slug}`}
-						key={item.sys.id}
-						className={wrapperClasses}
-					>
-						<Card className='bg-white mb-6 shadow-lg hover:shadow-xl transition-shadow duration-300'>
+					<Link href={`/blog/${item.fields.slug}`} key={item.sys.id}>
+						<Card className='bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full justify-between'>
 							<CardHeader>
-								<CardTitle className='text-2xl font-bold'>
+								<CardTitle className='text-2xl font-bold line-clamp-2'>
 									{String(title)}
 								</CardTitle>
 							</CardHeader>
 
-							<CardContent className='flex flex-col items-center'>
-								{pictureUrl && (
-									<Image
-										src={`${pictureUrl}`}
-										alt={String(title)}
-										width={500}
-										height={500}
-										className='rounded-lg mb-4'
-									/>
-								)}
-							</CardContent>
+							<div>
+								<CardContent className='flex flex-col items-center'>
+									{pictureUrl && (
+										<Image
+											src={`${pictureUrl}`}
+											alt={String(title)}
+											width={500}
+											height={500}
+											className='rounded-lg mb-4'
+										/>
+									)}
+								</CardContent>
+								<CardDescription className='text-sm text-gray-500'>
+									<p className='text-sm text-gray-400'>
+										{`${format(new Date(String(createdAt)), 'MMMM do, yyyy')}`}
+									</p>
+								</CardDescription>
+							</div>
 
 							{/* <CardFooter className='justify-center flex'>
 							<p className='text-sm text-gray-500'>ID: {title}</p>
