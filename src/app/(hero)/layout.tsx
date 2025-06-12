@@ -1,4 +1,3 @@
-import { contentfulClient } from '@/lib/contentful'
 import '../globals.css'
 
 export default async function RootLayout({

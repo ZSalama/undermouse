@@ -18,7 +18,6 @@ const Contact = dynamic(() => import('@/components/Contact/Contact'), {
 })
 
 export default function Hero_Client(blog: any) {
-	console.log('blog from client', blog)
 	const container = useRef<HTMLDivElement | null>(null)
 	const page_container = useRef<HTMLDivElement | null>(null)
 

@@ -40,7 +40,6 @@ export default async function Blog() {
 				<div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
 					{entries.items.map((item: any) => {
 						const { title, pictureUrl, createdAt } = item.fields
-						console.log('picture url: ', pictureUrl)
 						return (
 							<Link key={item.sys.id} href={`/blog/${item.fields.slug}`}>
 								<Card className='bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full justify-between'>
