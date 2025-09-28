@@ -74,22 +74,22 @@ const contactMethods = [
 
 export default function New_Hero() {
 	return (
-		<main className='min-h-screen bg-slate-950 text-slate-100'>
+		<main className='min-h-screen bg-[#FAFAFA] text-[#212121]'>
 			<div className='mx-auto flex max-w-6xl flex-col gap-24 px-6 py-20 sm:px-8 lg:py-28'>
 				<header className='grid gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-center'>
 					<div className='space-y-6'>
-						<p className='text-sm font-semibold uppercase tracking-[0.35em] text-slate-400'>
+						<p className='text-sm font-semibold uppercase tracking-[0.35em] text-[#6F6F6F]'>
 							Hi, my name is
 						</p>
 						<div>
-							<h1 className='text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl'>
+							<h1 className='text-4xl font-bold tracking-tight text-[#101010] sm:text-5xl lg:text-6xl'>
 								Zack Salama
 							</h1>
-							<p className='mt-2 text-xl font-medium text-slate-300 sm:text-2xl'>
+							<p className='mt-2 text-xl font-medium text-[#2F2F2F] sm:text-2xl'>
 								Full-Stack Developer
 							</p>
 						</div>
-						<p className='max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg'>
+						<p className='max-w-2xl text-base leading-relaxed text-[#3D3D3D] sm:text-lg'>
 							I help teams craft performant, accessible web experiences—from the
 							first wireframe to production-ready systems. My sweet spot is
 							bridging design and engineering to deliver interfaces that feel as
@@ -98,36 +98,36 @@ export default function New_Hero() {
 						<div className='flex flex-wrap gap-3'>
 							<Link
 								href='#projects'
-								className='rounded-full bg-emerald-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300'
+								className='rounded-full bg-[#7C3AED] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#6D28D9]'
 							>
 								View featured work
 							</Link>
 							<a
 								href='#contact'
-								className='rounded-full border border-slate-700 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-slate-500 hover:text-white'
+								className='rounded-full border border-[#2F2F2F] px-6 py-3 text-sm font-semibold text-[#212121] transition hover:border-[#7C3AED] hover:text-[#7C3AED]'
 							>
 								Get in touch
 							</a>
 						</div>
 					</div>
-					<aside className='space-y-6 rounded-3xl border border-slate-800 bg-slate-900/60 p-8 shadow-xl shadow-emerald-500/5'>
-						<p className='text-sm font-semibold uppercase tracking-[0.35em] text-emerald-300'>
+					<aside className='space-y-6 rounded-3xl border border-[#E5E5E5] bg-white p-8 shadow-xl shadow-black/5'>
+						<p className='text-sm font-semibold uppercase tracking-[0.35em] text-[#7C3AED]'>
 							Snapshot
 						</p>
-						<ul className='space-y-4 text-sm text-slate-300'>
+						<ul className='space-y-4 text-sm text-[#3A3A3A]'>
 							<li>
-								<span className='block font-semibold text-white'>
+								<span className='block font-semibold text-[#121212]'>
 									Currently
 								</span>
 								Building digital products and design systems for startups and
 								creative studios.
 							</li>
 							<li>
-								<span className='block font-semibold text-white'>Focus</span>
+								<span className='block font-semibold text-[#121212]'>Focus</span>
 								Frontend architecture, API design, and developer experience.
 							</li>
 							<li>
-								<span className='block font-semibold text-white'>Location</span>
+								<span className='block font-semibold text-[#121212]'>Location</span>
 								Palo Alto, CA (remote-friendly)
 							</li>
 						</ul>
@@ -136,16 +136,16 @@ export default function New_Hero() {
 
 				<section className='space-y-12' aria-labelledby='skills-heading'>
 					<div className='space-y-4'>
-						<p className='text-sm font-semibold uppercase tracking-[0.35em] text-emerald-300'>
+						<p className='text-sm font-semibold uppercase tracking-[0.35em] text-[#7C3AED]'>
 							Core toolkit
 						</p>
 						<h2
 							id='skills-heading'
-							className='text-3xl font-semibold text-white sm:text-4xl'
+							className='text-3xl font-semibold text-[#121212] sm:text-4xl'
 						>
 							Engineering stack
 						</h2>
-						<p className='max-w-2xl text-base text-slate-300 sm:text-lg'>
+						<p className='max-w-2xl text-base text-[#3D3D3D] sm:text-lg'>
 							A blend of modern frameworks, typed tooling, and cloud
 							infrastructure that keeps shipping fast and reliable.
 						</p>
@@ -154,16 +154,16 @@ export default function New_Hero() {
 						{skillGroups.map((group) => (
 							<div
 								key={group.title}
-								className='rounded-2xl border border-slate-800 bg-slate-900/40 p-6'
+								className='rounded-2xl border border-[#E5E5E5] bg-white p-6 shadow-sm shadow-black/5'
 							>
-								<h3 className='text-lg font-semibold text-white'>
+								<h3 className='text-lg font-semibold text-[#121212]'>
 									{group.title}
 								</h3>
-								<ul className='mt-3 space-y-2 text-sm text-slate-300'>
+								<ul className='mt-3 space-y-2 text-sm text-[#3A3A3A]'>
 									{group.items.map((item) => (
 										<li key={item} className='flex items-center gap-2'>
 											<span
-												className='h-1.5 w-1.5 rounded-full bg-emerald-400'
+												className='h-1.5 w-1.5 rounded-full bg-[#7C3AED]'
 												aria-hidden
 											/>
 											{item}
@@ -177,12 +177,12 @@ export default function New_Hero() {
 
 				<section className='space-y-8' aria-labelledby='highlights-heading'>
 					<div className='space-y-4'>
-						<p className='text-sm font-semibold uppercase tracking-[0.35em] text-emerald-300'>
+						<p className='text-sm font-semibold uppercase tracking-[0.35em] text-[#7C3AED]'>
 							How I work
 						</p>
 						<h2
 							id='highlights-heading'
-							className='text-3xl font-semibold text-white sm:text-4xl'
+							className='text-3xl font-semibold text-[#121212] sm:text-4xl'
 						>
 							Guiding principles
 						</h2>
@@ -191,12 +191,12 @@ export default function New_Hero() {
 						{highlights.map((highlight) => (
 							<article
 								key={highlight.title}
-								className='flex flex-col gap-4 rounded-2xl border border-slate-800 bg-slate-900/40 p-6'
+								className='flex flex-col gap-4 rounded-2xl border border-[#E5E5E5] bg-white p-6 shadow-sm shadow-black/5'
 							>
-								<h3 className='text-xl font-semibold text-white'>
+								<h3 className='text-xl font-semibold text-[#121212]'>
 									{highlight.title}
 								</h3>
-								<p className='text-sm leading-relaxed text-slate-300'>
+								<p className='text-sm leading-relaxed text-[#3D3D3D]'>
 									{highlight.description}
 								</p>
 							</article>
@@ -210,16 +210,16 @@ export default function New_Hero() {
 					aria-labelledby='projects-heading'
 				>
 					<div className='space-y-4'>
-						<p className='text-sm font-semibold uppercase tracking-[0.35em] text-emerald-300'>
+						<p className='text-sm font-semibold uppercase tracking-[0.35em] text-[#7C3AED]'>
 							Featured work
 						</p>
 						<h2
 							id='projects-heading'
-							className='text-3xl font-semibold text-white sm:text-4xl'
+							className='text-3xl font-semibold text-[#121212] sm:text-4xl'
 						>
 							Projects that stand out
 						</h2>
-						<p className='max-w-2xl text-base text-slate-300 sm:text-lg'>
+						<p className='max-w-2xl text-base text-[#3D3D3D] sm:text-lg'>
 							A sample of recent initiatives that highlight my experience with
 							product development from discovery through delivery.
 						</p>
@@ -228,15 +228,15 @@ export default function New_Hero() {
 						{featuredProjects.map((project) => (
 							<article
 								key={project.name}
-								className='flex flex-col gap-4 rounded-2xl border border-slate-800 bg-slate-900/40 p-6 shadow-lg shadow-emerald-500/5'
+								className='flex flex-col gap-4 rounded-2xl border border-[#E5E5E5] bg-white p-6 shadow-lg shadow-black/10'
 							>
-								<h3 className='text-xl font-semibold text-white'>
+								<h3 className='text-xl font-semibold text-[#121212]'>
 									{project.name}
 								</h3>
-								<p className='text-sm leading-relaxed text-slate-300'>
+								<p className='text-sm leading-relaxed text-[#3D3D3D]'>
 									{project.description}
 								</p>
-								<p className='text-xs font-medium uppercase tracking-[0.25em] text-emerald-300'>
+								<p className='text-xs font-medium uppercase tracking-[0.25em] text-[#7C3AED]'>
 									{project.focus}
 								</p>
 							</article>
@@ -250,16 +250,16 @@ export default function New_Hero() {
 					id='contact'
 				>
 					<div className='space-y-4'>
-						<p className='text-sm font-semibold uppercase tracking-[0.35em] text-emerald-300'>
+						<p className='text-sm font-semibold uppercase tracking-[0.35em] text-[#7C3AED]'>
 							Let&apos;s build together
 						</p>
 						<h2
 							id='contact-heading'
-							className='text-3xl font-semibold text-white sm:text-4xl'
+							className='text-3xl font-semibold text-[#121212] sm:text-4xl'
 						>
 							Contact
 						</h2>
-						<p className='max-w-2xl text-base text-slate-300 sm:text-lg'>
+						<p className='max-w-2xl text-base text-[#3D3D3D] sm:text-lg'>
 							Ready to collaborate or chat about the next ambitious idea? Reach
 							out through the channels below—I&apos;ll respond within a day.
 						</p>
@@ -269,14 +269,14 @@ export default function New_Hero() {
 							<a
 								key={method.label}
 								href={method.href}
-								className='group rounded-2xl border border-slate-800 bg-slate-900/40 p-6 transition hover:border-emerald-400/70 hover:shadow-lg hover:shadow-emerald-500/10'
+								className='group rounded-2xl border border-[#E5E5E5] bg-white p-6 transition hover:border-[#7C3AED] hover:shadow-lg hover:shadow-black/10'
 								target={method.href.startsWith('http') ? '_blank' : undefined}
 								rel={method.href.startsWith('http') ? 'noreferrer' : undefined}
 							>
-								<p className='text-xs font-semibold uppercase tracking-[0.35em] text-emerald-300'>
+								<p className='text-xs font-semibold uppercase tracking-[0.35em] text-[#7C3AED]'>
 									{method.label}
 								</p>
-								<p className='mt-3 text-lg font-medium text-white group-hover:text-emerald-200'>
+								<p className='mt-3 text-lg font-medium text-[#212121] group-hover:text-[#7C3AED]'>
 									{method.value}
 								</p>
 							</a>
