@@ -1,7 +1,21 @@
+// revalidate every hour
+
 export const revalidate = 3600
 
-import New_Hero from './New_Hero'
+import React from 'react'
 
-export default function Page() {
-        return <New_Hero />
+import Hero_Client from './Hero_Client'
+
+import { contentfulClient } from '@/lib/contentful'
+
+export default async function page() {
+	const blog = await contentfulClient.getEntries({
+		content_type: 'blog',
+
+		limit: 3,
+
+		order: ['-fields.createdAt'],
+	})
+
+	return <Hero_Client blog={blog.items} />
 }
