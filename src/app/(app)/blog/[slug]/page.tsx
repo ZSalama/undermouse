@@ -83,7 +83,8 @@ export default async function page({
 		return <div>Post not found</div>
 	}
 
-	const { title, content, pictureUrl, createdAt } = post.items[0].fields
+	const { title, content, pictureUrl, createdAt, updatedAt } =
+		post.items[0].fields
 
 	return (
 		<article className='px-4 py-12'>
@@ -112,7 +113,9 @@ export default async function page({
 
 				{/* slug / meta */}
 				<p className='text-xs text-gray-400 uppercase tracking-wide mb-6'>
-					Date: {`${format(new Date(String(createdAt)), 'MMMM do, yyyy')}`}
+					Created: {`${format(new Date(String(createdAt)), 'MMMM do, yyyy')}`}
+					<br /> Updated:{' '}
+					{`${format(new Date(String(updatedAt)), 'MMMM do, yyyy')}`}
 				</p>
 
 				{/* content */}

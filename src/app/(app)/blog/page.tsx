@@ -39,7 +39,7 @@ export default async function Blog() {
 
 				<div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
 					{entries.items.map((item: any) => {
-						const { title, pictureUrl, createdAt } = item.fields
+						const { title, pictureUrl, createdAt, updatedAt } = item.fields
 						return (
 							<Link key={item.sys.id} href={`/blog/${item.fields.slug}`}>
 								<Card className='bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full justify-between'>
@@ -64,7 +64,7 @@ export default async function Blog() {
 										<CardDescription className='text-sm text-gray-500 text-center'>
 											<p className='text-sm text-gray-400'>
 												{`${format(
-													new Date(String(createdAt)),
+													new Date(String(updatedAt)),
 													'MMMM do, yyyy'
 												)}`}
 											</p>

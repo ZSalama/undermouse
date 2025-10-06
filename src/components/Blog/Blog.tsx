@@ -25,7 +25,7 @@ export default function Blog({ className, data }: BlogProps) {
 			className={`${className} w-full text-center justify-center flex flex-col sm:flex-row gap-4 my-8 mx-4 md:mx-auto max-w-xl md:max-w-2xl lg:max-w-4xl`}
 		>
 			{posts.map((item: any) => {
-				const { title, pictureUrl, createdAt } = item.fields
+				const { title, pictureUrl, updatedAt } = item.fields
 
 				return (
 					<Link href={`/blog/${item.fields.slug}`} key={item.sys.id}>
@@ -50,7 +50,7 @@ export default function Blog({ className, data }: BlogProps) {
 								</CardContent>
 								<CardDescription className='text-sm text-gray-500'>
 									<p className='text-sm text-gray-400'>
-										{`${format(new Date(String(createdAt)), 'MMMM do, yyyy')}`}
+										{`${format(new Date(String(updatedAt)), 'MMMM do, yyyy')}`}
 									</p>
 								</CardDescription>
 							</div>
