@@ -22,14 +22,14 @@ export default function Blog({ className, data }: BlogProps) {
 	const posts = data.blog
 	return (
 		<div
-			className={`${className} w-full text-center justify-center flex flex-col md:flex-row gap-4 my-8 mx-4 lg:mx-auto md:w-2xl lg:w-4xl`}
+			className={`${className} w-full text-center justify-center flex flex-col sm:flex-row gap-4 my-8 mx-4 md:mx-auto max-w-2xl max-w-xl md:max-w-2xl lg:max-w-4xl`}
 		>
 			{posts.map((item: any) => {
 				const { title, pictureUrl, createdAt } = item.fields
 
 				return (
 					<Link href={`/blog/${item.fields.slug}`} key={item.sys.id}>
-						<Card className='bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 h-full justify-between'>
+						<Card className='bg-white shadow-lg hover:shadow-xl transition-shadow duration-300  h-80 md:h-full justify-between'>
 							<CardHeader>
 								<CardTitle className='text-2xl font-bold line-clamp-2'>
 									{String(title)}
@@ -44,7 +44,7 @@ export default function Blog({ className, data }: BlogProps) {
 											alt={String(title)}
 											width={500}
 											height={500}
-											className='rounded-lg mb-4'
+											className='rounded-lg mb-4 object-cover h-48 w-full'
 										/>
 									)}
 								</CardContent>

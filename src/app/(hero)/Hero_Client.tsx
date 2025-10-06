@@ -87,7 +87,10 @@ export default function Hero_Client(blog: any) {
 				<div className='flex justify-center max-w-4xl mx-auto'>
 					<Blog className='mb-20 mt-10 md:mt-10' data={blog} />
 				</div>
-				<div className='mt-20 px-5 md:px-8 bg-gray-200 lg:px-12 text-5xl font-bold mx-4 md:mx-auto md:w-2xl lg:w-4xl'>
+				<div
+					className='mt-20 px-5 md:px-8 bg-gray-200 lg:px-12 text-5xl font-bold mx-4 md:mx-auto md:w-2xl lg:w-4xl'
+					id='portfolio'
+				>
 					Portfolio
 				</div>
 				<div className='flex justify-center max-w-4xl mx-auto'>
