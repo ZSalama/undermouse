@@ -143,7 +143,7 @@ export default function Contact({ className }: Props) {
 					</Button>
 				</form>
 				<p className='text-l'>
-					Or you can send me an email at undermouseweb@gmail.com
+					Or you can send an email to undermouseweb@gmail.com
 				</p>
 			</Form>
 		</section>

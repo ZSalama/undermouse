@@ -22,7 +22,7 @@ export default function Blog({ className, data }: BlogProps) {
 	const posts = data.blog
 	return (
 		<div
-			className={`${className} w-full text-center justify-center flex flex-col sm:flex-row gap-4 my-8 mx-4 md:mx-auto max-w-2xl max-w-xl md:max-w-2xl lg:max-w-4xl`}
+			className={`${className} w-full text-center justify-center flex flex-col sm:flex-row gap-4 my-8 mx-4 md:mx-auto max-w-xl md:max-w-2xl lg:max-w-4xl`}
 		>
 			{posts.map((item: any) => {
 				const { title, pictureUrl, createdAt } = item.fields
