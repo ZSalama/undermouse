@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-    title: 'UnderMouse',
-    description: 'Website for UnderMouse',
+    title: 'Fernandina Beach Website Design | UnderMouse Creative',
+    description:
+        'UnderMouse Creative builds high-converting websites for local businesses in Fernandina Beach, Florida with tailored design, SEO, and ongoing support.',
 }
 
 export default function RootLayout({
