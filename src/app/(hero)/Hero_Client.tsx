@@ -142,7 +142,7 @@ const processSteps = [
 export default function Hero_Client() {
 	return (
 		<div className='bg-slate-50 text-slate-900'>
-			<section className='relative overflow-hidden bg-slate-900 text-white'>
+			<section className='flex relative overflow-hidden bg-slate-900 text-white'>
 				<div className='mx-auto flex max-w-6xl flex-col gap-8 px-6 py-24 md:flex-row md:items-center md:gap-16 md:py-28'>
 					<div className='relative z-10 flex-1'>
 						<p className='text-sm uppercase tracking-[0.4em] text-amber-300'>
