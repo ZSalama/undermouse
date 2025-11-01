@@ -113,7 +113,6 @@ export default async function page({
 
 				{/* slug / meta */}
 				<p className='text-xs text-gray-400 uppercase tracking-wide mb-6'>
-					Created: {`${format(new Date(String(createdAt)), 'MMMM do, yyyy')}`}
 					<br /> Updated:{' '}
 					{`${format(new Date(String(updatedAt)), 'MMMM do, yyyy')}`}
 				</p>

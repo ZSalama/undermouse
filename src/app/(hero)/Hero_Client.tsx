@@ -1,7 +1,9 @@
 'use client'
 
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import Link from 'next/link'
+import { format } from 'date-fns'
 
 import About from '@/components/About/About'
 import Footer from '@/components/Footer/Footer'
@@ -139,7 +141,18 @@ const processSteps = [
 	},
 ]
 
-export default function Hero_Client() {
+type BlogPreview = {
+	slug: string
+	title: string
+	pictureUrl: string | null
+	updatedAt: string
+}
+
+interface HeroClientProps {
+	blogPosts: BlogPreview[]
+}
+
+export default function Hero_Client({ blogPosts }: HeroClientProps) {
 	return (
 		<div className='bg-slate-50 text-slate-900'>
 			<section className='flex relative overflow-hidden bg-slate-900 text-white'>
@@ -354,6 +367,74 @@ export default function Hero_Client() {
 					</div>
 				</div>
 			</section>
+
+			{blogPosts.length > 0 && (
+				<section id='blog' className='bg-slate-900 py-20 text-white'>
+					<div className='mx-auto max-w-6xl px-6'>
+						<div className='mx-auto max-w-3xl text-center'>
+							<span className='text-sm font-semibold uppercase tracking-[0.3em] text-amber-300'>
+								Blog
+							</span>
+							<h2 className='mt-4 text-3xl font-bold md:text-4xl'>
+								Learn more behind the scenes
+							</h2>
+							<p className='mt-4 text-lg text-slate-200'>
+								Dive into how I make websites that drive results for Fernandina
+								Beach
+							</p>
+						</div>
+						<div className='mt-12 grid gap-6 md:grid-cols-3'>
+							{blogPosts.map((post) => (
+								<article
+									key={post.slug}
+									className='flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur transition-transform hover:-translate-y-1 hover:bg-white/10'
+								>
+									<div>
+										{post.pictureUrl && (
+											<div className='relative h-48 w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-800/40'>
+												<Image
+													src={post.pictureUrl}
+													alt={post.title}
+													fill
+													className='object-cover'
+													sizes='(min-width: 768px) 33vw, 100vw'
+												/>
+											</div>
+										)}
+										<div className='mt-6 flex flex-1 flex-col'>
+											<p className='text-xs uppercase tracking-[0.2em] text-amber-300'>
+												{format(new Date(post.updatedAt), 'MMMM d, yyyy')}
+											</p>
+											<h3 className='mt-3 text-2xl font-semibold leading-snug text-white line-clamp-3'>
+												{post.title}
+											</h3>
+										</div>
+									</div>
+									<div>
+										<div className='mt-6 flex items-center justify-between'>
+											<Link href={`/blog/${post.slug}`}>
+												<Button className='rounded-full bg-amber-300 px-6 text-slate-900 hover:bg-amber-200 cursor-pointer'>
+													Read post
+												</Button>
+											</Link>
+										</div>
+									</div>
+								</article>
+							))}
+						</div>
+						<div className='mt-12 text-center'>
+							<Link href='/blog'>
+								<Button
+									variant='outline'
+									className='cursor-pointer rounded-full border-amber-300 bg-transparent px-8 text-lg font-semibold text-white transition-colors hover:bg-amber-300 hover:text-slate-900'
+								>
+									Read all articles
+								</Button>
+							</Link>
+						</div>
+					</div>
+				</section>
+			)}
 
 			<section id='process' className='bg-slate-100 py-20'>
 				<div className='mx-auto max-w-6xl px-6'>
